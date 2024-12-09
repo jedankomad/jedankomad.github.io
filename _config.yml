@@ -52,12 +52,12 @@ round-avatar: true
 social-network-links:
   email: "notyet@gmail.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: deanattali
+#  facebook: deanattali
   github: jedankomad
-  twitter: daattali
+#  twitter: daattali
 # patreon: DeanAttali
   youtube: "@daattali"
-  whatsapp: 15551212
+#  whatsapp: 15551212
 #  medium: yourname
 #  reddit: yourname or r/yoursubreddit
    linkedin: pavle-saponjic
@@ -76,7 +76,7 @@ social-network-links:
 #  bluesky: yourname
 #  ORCID: your ORCID ID
 #  google-scholar: your google scholar
-   discord: "invite_code" or "users/299958260658601984" or "invite/invite_code"
+#   discord: "invite_code" or "users/userid" or "invite/invite_code"
 #  kaggle: yourname
 #  hackerrank: yourname
 #  gitlab: yourname
