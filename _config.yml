@@ -51,21 +51,21 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
 #  email: "notyet@gmail.com"
-#  rss: true  # remove this line if you don't want to show an RSS link at the bottom
+   rss: true  # remove this line if you don't want to show an RSS link at the bottom
 #  facebook: deanattali
    github: jedankomad
 #  twitter: daattali
 # patreon: DeanAttali
-   youtube: "@daattali"
+#   youtube: "@daattali"
 #  whatsapp: 15551212
 #  medium: yourname
 #  reddit: yourname or r/yoursubreddit
-#   linkedin: pavle-saponjic
+   linkedin: pavle-saponjic-b5a388295
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
-#  instagram: deanat78
-   spotify: Jedankomad
+   instagram: jedankomad
+   spotify: shaponja
 #  telephone: +14159998888
    steam: jopa4561
 #  twitch: yourname
