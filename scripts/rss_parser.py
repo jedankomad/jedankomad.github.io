@@ -22,7 +22,7 @@ def save_seen_links(links):
 # Generisanje Markdown fajla
 def generate_markdown(entry):
     title = entry.title.replace(" ", "-").lower()
-    date = datetime.strptime(entry.published, "%a, %d %b %Y %H:%M:%S %Z").date()
+    date = datetime.strptime(entry.published, "%a, %d %b %Y %H:%M:%S %z").date()
     filename = f"{date}-{title}.md"
     filepath = os.path.join(POSTS_DIR, filename)
     
