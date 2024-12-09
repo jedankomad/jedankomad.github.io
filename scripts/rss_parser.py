@@ -7,16 +7,18 @@ RSS_FEED_URL = "https://letterboxd.com/pavlesap/rss"  # Promeni sa tvojim RSS UR
 POSTS_DIR = "_posts"
 SEEN_FILE = "scripts/seen_reviews.txt"
 
-if not os.path.exists(SEEN_FILE):
-    with open(SEEN_FILE, "w") as f:
-        pass  # Kreiraj prazan fajl ako ne postoji
-
 # Funkcija za učitavanje već obrađenih linkova
 def load_seen_links():
     if not os.path.exists(SEEN_FILE):
         return set()
     with open(SEEN_FILE, "r") as file:
         return set(file.read().splitlines())
+
+#da cuva u seen_reviews
+def save_to_history(post_id):
+    # Dodaj post ID u seen_reviews.txt
+    with open(SEEN_FILE, "a") as f:
+        f.write(f"{post_id}\n")
 
 # Funkcija za čuvanje novih linkova
 def save_seen_links(links):
