@@ -28,7 +28,7 @@ def generate_markdown(entry):
     
     content = f"""---
 layout: post
-title: "[{entry.title}]({entry.link})"
+title: "{entry.title}"
 date: {date}
 ---
 
