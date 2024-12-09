@@ -4,4 +4,4 @@ title: "No Country for Old Men, 2007 - ★★★"
 date: 2024-04-12
 ---
 
-Moj review je na [ovom linku](https://letterboxd.com/pavlesap/film/no-country-for-old-men/).
+[Review](https://letterboxd.com/pavlesap/film/no-country-for-old-men/).
