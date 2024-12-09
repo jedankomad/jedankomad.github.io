@@ -17,7 +17,7 @@ def load_seen_links():
 # Funkcija za čuvanje novih linkova
 def save_seen_links(links):
     with open(SEEN_FILE, "a") as file:
-        file.write("\n".join(links))
+        file.append("\n".join(links))
     print(f"Saved links to {SEEN_FILE}: {links}")  # Test print
 
 # Generisanje Markdown fajla
