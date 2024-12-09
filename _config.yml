@@ -96,7 +96,7 @@ rss-description: This website is a virtual proof that I'm awesome
 share-links-active:
   instagram: true
   steam: true
-  linkedin: true
+  linkedin: false
   vk: false
 
 # How to display the link to your website in the footer
