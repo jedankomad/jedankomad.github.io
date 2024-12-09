@@ -32,7 +32,7 @@ title: "{entry.title}"
 date: {date}
 ---
 
-Moj review je na [ovom linku]({entry.link}).
+[Review]({entry.link}).
 """
     with open(filepath, "w") as file:
         file.write(content)
