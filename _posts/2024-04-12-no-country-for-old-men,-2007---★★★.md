@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[No Country for Old Men, 2007 - ★★★](https://letterboxd.com/pavlesap/film/no-country-for-old-men/)"
+title: "No Country for Old Men, 2007 - ★★★"
 date: 2024-04-12
 ---
 
