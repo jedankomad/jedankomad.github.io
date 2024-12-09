@@ -24,7 +24,7 @@ navbar-links:
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+#  Author's home: "https://deanattali.com"
 
 ################
 # --- Logo --- #
@@ -82,6 +82,7 @@ social-network-links:
 #  gitlab: yourname
 #  itchio: yourname
    untappd: jedankomad
+   letterboxd: pavlesap
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
@@ -100,7 +101,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-# url-pretty: "Jedankomad.com"
+  url-pretty: "Jedankomad.com"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
