@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Superherojski filmovi"
+title: "[Superherojski filmovi](https://letterboxd.com/pavlesap/list/superherojski-filmovi/)"
 date: 2024-09-01
 ---
 

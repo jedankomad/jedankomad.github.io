@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "November Criminals, 2017 - ★"
+title: "[November Criminals, 2017 - ★](https://letterboxd.com/pavlesap/film/november-criminals/)"
 date: 2024-05-29
 ---
 
