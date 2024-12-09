@@ -10,7 +10,7 @@
 ############################
 
 # Name of website
-title: My website
+title: Pajin Website
 
 # Your name to show in the footer
 author: Pavle Saponjic
@@ -50,7 +50,7 @@ round-avatar: true
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "notyet@gmail.com"
+#  email: "notyet@gmail.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
 #  facebook: deanattali
   github: jedankomad
@@ -60,7 +60,7 @@ social-network-links:
 #  whatsapp: 15551212
 #  medium: yourname
 #  reddit: yourname or r/yoursubreddit
-   linkedin: pavle-saponjic
+#   linkedin: pavle-saponjic
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -100,7 +100,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "Jedankomad.com"
+# url-pretty: "Jedankomad.com"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
