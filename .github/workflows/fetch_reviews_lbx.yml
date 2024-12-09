@@ -1,0 +1,34 @@
+name: Fetch Film Reviews
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Pokreće se na svaki sat
+  workflow_dispatch:  # Ručno pokretanje workflow-a
+
+jobs:
+  fetch-reviews:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install feedparser
+
+      - name: Fetch and generate posts
+        run: |
+          python scripts/rss_parser.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.name "github-actions"
+          git config --local user.email "actions@github.com"
+          git add _posts/*.md
+          git commit -m "Add new film review post" || echo "No new posts to add"
+          git push
