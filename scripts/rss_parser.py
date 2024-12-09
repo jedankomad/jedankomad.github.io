@@ -14,12 +14,6 @@ def load_seen_links():
     with open(SEEN_FILE, "r") as file:
         return set(file.read().splitlines())
 
-#da cuva u seen_reviews
-def save_to_history(post_id):
-    # Dodaj post ID u seen_reviews.txt
-    with open(SEEN_FILE, "a") as f:
-        f.write(f"{post_id}\n")
-
 # Funkcija za čuvanje novih linkova
 def save_seen_links(links):
     with open(SEEN_FILE, "w") as file:
