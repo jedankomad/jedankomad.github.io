@@ -25,12 +25,12 @@ author: Pavle Saponjic
 ###############################################
 
 navbar-links:
-  About Me: "pages/aboutme"
+  About Me: "aboutme"
   Movies: "movies"
-  TV Shows: "pages/tvshows"
-  Games: "pages/games"
-  Anime: "pages/anime"
-  Manga: "pages/manga"
+  TV Shows: "tvshows"
+  Games: "games"
+  Anime: "anime"
+  Manga: "manga"
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
 #    - Learn markdown: "https://www.markdowntutorial.com/"
