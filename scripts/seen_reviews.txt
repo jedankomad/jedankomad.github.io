@@ -191,3 +191,6 @@ https://letterboxd.com/pavlesap/film/nope/
 https://letterboxd.com/pavlesap/film/superbad/
 https://letterboxd.com/pavlesap/film/the-batman/1/
 https://letterboxd.com/pavlesap/film/taxi-driver/
+https://letterboxd.com/pavlesap/film/zodiac/
+https://letterboxd.com/pavlesap/film/the-cabin-in-the-woods/
+https://letterboxd.com/pavlesap/film/rashomon/
