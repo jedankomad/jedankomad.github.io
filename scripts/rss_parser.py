@@ -7,6 +7,9 @@ RSS_FEED_URL = "https://letterboxd.com/pavlesap/rss"  # Promeni sa tvojim RSS UR
 POSTS_DIR = "pages/movies"
 SEEN_FILE = "scripts/seen_reviews.txt"
 
+# Proveri da li folder postoji, ako ne postoji - kreiraj ga
+os.makedirs(POSTS_DIR, exist_ok=True)
+
 # Funkcija za učitavanje već obrađenih linkova
 def load_seen_links():
     if not os.path.exists(SEEN_FILE):
@@ -27,8 +30,7 @@ def generate_markdown(entry):
     filename = f"{date}-{title}.md"
     filepath = os.path.join(POSTS_DIR, filename)
     
-    # Proveri da li folder postoji, ako ne postoji - kreiraj ga
-    os.makedirs(POSTS_DIR, exist_ok=True)
+    
     
     content = f"""---
 layout: post
