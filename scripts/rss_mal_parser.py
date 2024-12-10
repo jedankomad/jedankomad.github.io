@@ -26,6 +26,9 @@ def generate_markdown(entry):
     filename = f"{date}-{title}.md"
     filepath = os.path.join(POSTS_DIR, filename)
 
+    # Proveri da li folder postoji, ako ne postoji - kreiraj ga
+    os.makedirs(POSTS_DIR, exist_ok=True)
+
     content = f"""---
 layout: post
 title: "{entry.title}"
