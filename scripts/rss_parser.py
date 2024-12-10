@@ -31,6 +31,7 @@ def load_seen_links():
 def save_seen_links(links):
     with open(SEEN_FILE, "a") as file:
         file.write("\n".join(links))
+    file.write("\n")
     print(f"Saved links to {SEEN_FILE}: {links}")  # Test print
 
 # Generisanje Markdown fajla
@@ -66,10 +67,10 @@ def main():
         if entry.link not in seen_links:
             generate_markdown(entry)
             new_links.add(entry.link)
-            save_seen_links(entry.link.union)
+            #save_seen_links(entry.link)
     
     # Sačuvaj nove linkove
-    #save_seen_links(seen_links.union(new_links))
+    save_seen_links(seen_links.union(new_links))
 
 if __name__ == "__main__":
     main()
