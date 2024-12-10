@@ -50,7 +50,7 @@ def main():
     new_links = set()
 
     for entry in feed.entries:
-        if entry.link not in seen_links:
+        if "Completed" in entry.description and entry.link not in seen_links:
             generate_markdown(entry)
             new_links.add(entry.link)
 
