@@ -4,7 +4,7 @@ from datetime import datetime
 
 # Postavke
 RSS_FEED_URL = "https://letterboxd.com/pavlesap/rss"  # Promeni sa tvojim RSS URL-om
-POSTS_DIR = "pages/movies"
+POSTS_DIR = "pages/_movies"
 SEEN_FILE = "scripts/seen_reviews.txt"
 
 # Proveri da li folder postoji, ako ne postoji - kreiraj ga
