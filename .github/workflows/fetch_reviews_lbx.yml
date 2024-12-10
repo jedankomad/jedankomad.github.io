@@ -31,7 +31,7 @@ jobs:
         run: |
           git config --local user.name "github-actions"
           git config --local user.email "actions@github.com"
-          git add pages/_movies/*.md
+          git add _movies/*.md
           git add scripts/seen_reviews.txt
           git commit -m "Add new film review post" || echo "No new posts to add"
           git push https://${{ secrets.GITHUB_TOKEN }}@github.com/jedankomad/jedankomad.github.io.git
