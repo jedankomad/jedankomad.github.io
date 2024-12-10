@@ -21,7 +21,7 @@ author: Pavle Saponjic
 
 navbar-links:
   About Me: "aboutme"
-  Movies: "pages/movies/movies"
+  Movies: "pages/movies"
   TV Shows: "pages/tvshows"
   Games: "pages/games"
   Anime: "pages/anime"
