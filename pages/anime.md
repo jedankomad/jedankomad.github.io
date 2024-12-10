@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Anime
-subtitle: "stagod"
+subtitle: "Most recently completed"
 permalink: /anime/
 ---
 
