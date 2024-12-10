@@ -10,16 +10,15 @@ SEEN_FILE = "scripts/seen_reviews.txt"
 # Proveri da li folder postoji, ako ne postoji - kreiraj ga
 os.makedirs(POSTS_DIR, exist_ok=True)
 # Promeni prava ako je potrebno
-os.chmod(POSTS_DIR, 0o777)
+#os.chmod(POSTS_DIR, 0o777)
 
 # Putanja do movies direktorijuma
-directory = 'pages/movies'
-
+#directory = 'pages/movies'
 # Provera prava pristupa
-if os.access(directory, os.W_OK):
-    print(f"Možete da pišete u {directory}")
-else:
-    print(f"Nemate pravo pisanja u {directory}")
+#if os.access(directory, os.W_OK):
+#    print(f"Možete da pišete u {directory}")
+#else:
+#    print(f"Nemate pravo pisanja u {directory}")
 
 # Funkcija za učitavanje već obrađenih linkova
 def load_seen_links():
