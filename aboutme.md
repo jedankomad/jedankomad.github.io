@@ -13,4 +13,4 @@ What else do you need?
 
 ### My story
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie]([https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29](https://en.wikipedia.org/wiki/Drive_(2011_film))) and it will answer **all** your questions.
+If I drive for you, you get your money. You tell me where we start, where we're going, where we're going afterwards. I give you five minutes when we get there. Anything happens in that five minutes and I'm yours. No matter what. Anything a minute on either side of that and you're on your own. I don't sit in while you're running it down. I don't carry a gun. I drive.
