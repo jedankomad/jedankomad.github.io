@@ -43,14 +43,12 @@ def generate_markdown(entry):
     
     
     content = f"""---
-layout: default
+layout: redirect
 title: "{entry.title}"
 date: {date}
 permalink: /movies/{date}-{title}/
+external_url: "{entry.link}"
 ---
-
-# [Review]({entry.link})
-
 """
     with open(filepath, "w") as file:
         file.write(content)
