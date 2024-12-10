@@ -4,7 +4,6 @@ title: Movies
 subtitle: That's a bingo!
 ---
 
----
 layout: post
 title: Prvi pokusaj
 subtitle: Nemam pojma sta radim
