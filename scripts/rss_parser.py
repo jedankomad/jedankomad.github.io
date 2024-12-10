@@ -18,6 +18,8 @@ SEEN_FILE = "scripts/seen_reviews.txt"
 
 # Proveri da li folder postoji, ako ne postoji - kreiraj ga
 os.makedirs(POSTS_DIR, exist_ok=True)
+# Promeni prava ako je potrebno
+os.chmod(POSTS_DIR, 0o777)
 
 # Funkcija za učitavanje već obrađenih linkova
 def load_seen_links():
