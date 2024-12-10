@@ -4,7 +4,7 @@ from datetime import datetime
 
 # Postavke
 RSS_FEED_URL = "https://letterboxd.com/pavlesap/rss"  # Promeni sa tvojim RSS URL-om
-POSTS_DIR = "_posts"
+POSTS_DIR = "pages/movies"
 SEEN_FILE = "scripts/seen_reviews.txt"
 
 # Funkcija za učitavanje već obrađenih linkova
@@ -31,6 +31,7 @@ def generate_markdown(entry):
 layout: post
 title: ["{entry.title}"]({entry.link}) #"{entry.title}"
 date: {date}
+permalink: /movies/{date}-{title}/
 ---
 
 # [Review]({entry.link})
