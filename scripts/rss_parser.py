@@ -2,6 +2,15 @@ import feedparser
 import os
 from datetime import datetime
 
+# Putanja do movies direktorijuma
+directory = 'pages/movies'
+
+# Provera prava pristupa
+if os.access(directory, os.W_OK):
+    print(f"Možete da pišete u {directory}")
+else:
+    print(f"Nemate pravo pisanja u {directory}")
+
 # Postavke
 RSS_FEED_URL = "https://letterboxd.com/pavlesap/rss"  # Promeni sa tvojim RSS URL-om
 POSTS_DIR = "pages/movies"
