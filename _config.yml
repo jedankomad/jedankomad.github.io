@@ -21,9 +21,14 @@ author: Pavle Saponjic
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
+  Movies: "movies"
+  #TV Shows: "tvshows"
+  #Games: "games"
+  #Anime: "anime"
+  #Manga: "manga"
+#  Resources:
+#    - Beautiful Jekyll: "https://beautifuljekyll.com"
+#    - Learn markdown: "https://www.markdowntutorial.com/"
 #  Author's home: "https://deanattali.com"
 
 ################
