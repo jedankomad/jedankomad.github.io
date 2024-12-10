@@ -9,6 +9,18 @@ collections:
   movies:
     output: true
     permalink: /movies/:name/
+  anime:
+    output: true
+    permalink: /anime/:name/
+  manga:
+    output: true
+    permalink: /manga/:name/
+  tvshows:
+    output: true
+    permalink: /tvshows/:name/
+  games:
+    output: true
+    permalink: /games/:name/
 
 ############################
 # --- Required options --- #
