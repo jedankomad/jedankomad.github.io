@@ -310,10 +310,7 @@ plugins:
   - jekyll-sitemap
 
 # paginate_path: "/pages/movies/page:num"
-collections:
-  anime:
-    output: true
-    permalink: /anime/:name/
+
 
 
 # Beautiful Jekyll / Dean Attali
