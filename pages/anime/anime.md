@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "{entry.title}"
-date: {pubDate}
-permalink: /anime/{title}/
+layout: page
+title: Anime
+subtitle: "stagod"
+permalink: /anime/
 ---
 
