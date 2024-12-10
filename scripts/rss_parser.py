@@ -43,7 +43,7 @@ def generate_markdown(entry):
     
     
     content = f"""---
-layout: post
+layout: default
 title: "{entry.title}"
 date: {date}
 permalink: /movies/{date}-{title}/
