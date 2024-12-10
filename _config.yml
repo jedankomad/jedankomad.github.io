@@ -21,11 +21,11 @@ author: Pavle Saponjic
 
 navbar-links:
   About Me: "aboutme"
-  Movies: "movies"
-  #TV Shows: "tvshows"
-  #Games: "games"
-  #Anime: "anime"
-  #Manga: "manga"
+  Movies: "pages/movies"
+  TV Shows: "pages/tvshows"
+  Games: "pages/games"
+  Anime: "pages/anime"
+  Manga: "pages/manga"
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
 #    - Learn markdown: "https://www.markdowntutorial.com/"
@@ -111,16 +111,16 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-  url-pretty: "Jedankomad.com"
+  url-pretty: "jedankomad.com"
 
 # Add the website title to the title of every page
 #!!!!!!!! title-on-all-pages: true
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
-excerpt_length: 500
+excerpt_length: 0
 
 # Whether or not to show an excerpt for every blog post in the feed page
-feed_show_excerpt: true
+feed_show_excerpt: false
 
 # Whether or not to show a list of tags below each post preview in the feed page
 feed_show_tags: true
