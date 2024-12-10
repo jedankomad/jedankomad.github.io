@@ -49,6 +49,7 @@ date: {date}
 permalink: /movies/{date}-{title}/
 external_url: "{entry.link}"
 ---
+Hello
 """
     with open(filepath, "w") as file:
         file.write(content)
