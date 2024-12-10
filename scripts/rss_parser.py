@@ -66,7 +66,7 @@ def main():
         if entry.link not in seen_links:
             generate_markdown(entry)
             new_links.add(entry.link)
-            save_seen_links(entry)
+            save_seen_links(entry.link)
     
     # Sačuvaj nove linkove
     #save_seen_links(seen_links.union(new_links))
