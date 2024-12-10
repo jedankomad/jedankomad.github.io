@@ -33,9 +33,9 @@ title: "{entry.title}"
 date: {date}
 ---
 
-# [{entry.title}]({entry.link})
+# [Review]({entry.link})
 
-{entry.summary[:150]}...
+{entry.summary[:1]}
 """
     with open(filepath, "w") as file:
         file.write(content)
