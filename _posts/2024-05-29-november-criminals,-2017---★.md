@@ -6,4 +6,3 @@ date: 2024-05-29
 
 # [Review](https://letterboxd.com/pavlesap/film/november-criminals/)
 
-<

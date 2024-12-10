@@ -6,4 +6,3 @@ date: 2024-04-12
 
 # [Review](https://letterboxd.com/pavlesap/film/no-country-for-old-men/)
 
-<
