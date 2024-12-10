@@ -69,7 +69,7 @@ def main():
             #save_seen_links(entry.link)
     
     # Sačuvaj nove linkove
-    save_seen_links(seen_links.union(new_links))
+    save_seen_links(new_links)
 
 if __name__ == "__main__":
     main()
