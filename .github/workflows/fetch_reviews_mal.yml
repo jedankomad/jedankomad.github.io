@@ -23,7 +23,8 @@ jobs:
 
       - name: Fetch and generate posts
         run: |
-          python scripts/rss_mal_parser.py
+          python scripts/rss_mala_parser.py
+          python scripts/rss_malm_parser.py
 
       - name: Commit and push changes
         env:
