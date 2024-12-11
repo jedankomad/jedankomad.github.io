@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Manga
-subtitle: Currently reading.
+subtitle: Most recently completed
 permalink: /manga/
 ---
 
