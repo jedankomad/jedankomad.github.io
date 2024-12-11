@@ -32,6 +32,8 @@ jobs:
           git config --local user.name "github-actions"
           git config --local user.email "actions@github.com"
           git add _anime/*.md
+          git add _manga/*.md
           git add scripts/seen_anime_reviews.txt
-          git commit -m "Add new anime review post" || echo "No new posts to add"
+          git add scripts/seen_manga_reviews.txt
+          git commit -m "Add new anime/manga review post" || echo "No new posts to add"
           git push https://${{ secrets.GITHUB_TOKEN }}@github.com/jedankomad/jedankomad.github.io.git
