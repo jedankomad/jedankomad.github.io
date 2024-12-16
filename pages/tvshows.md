@@ -16,6 +16,9 @@ permalink: /tvshows/
 {% endfor %}
 </ul>
 
+<!-- Razdvajanje lista -->
+<hr>
+
 ## Most recently completed
 <ol>
 {% for tvshow in site.tvshows %}
