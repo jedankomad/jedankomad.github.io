@@ -6,7 +6,7 @@ permalink: /tvshows/
 ---
 
 ## Currently watching
-<ol>
+<ol id="current">
 {% for tvshow in site.tvshows %}
   <li>  
     {% if tvshow.path contains 'current' %}
@@ -17,7 +17,7 @@ permalink: /tvshows/
 </ol>
 
 ## Most recently completed
-<ol>
+<ol id="completed">
 {% for tvshow in site.tvshows %}
   <li>
     {% if tvshow.path contains 'completed' %}
