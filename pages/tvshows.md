@@ -6,9 +6,9 @@ permalink: /tvshows/
 ---
 
 <ul>
-{% for anime in site.anime %}
+{% for tvshow in site.tvshows %}
   <li>
-    <a href="{{ anime.external_url }}">{{ anime.title }}</a>
+    <a href="{{ tvshow.external_url }}">{{ tvshow.title }}</a>
   </li>
 {% endfor %}
 </ul>
