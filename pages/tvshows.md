@@ -7,9 +7,11 @@ permalink: /tvshows/
 
 ## Currently watching
 <ol>
-{% for tvshow in site.tvshows.now %}
-  <li>
-    <a href="{{ tvshow.external_url }}">{{ tvshow.title }}</a>
+{% for tvshow in site.tvshows %}
+  <li>  
+    {% if tvshow.path contains 'current' %}
+      <a href="{{ tvshow.external_url }}">{{ tvshow.title }}</a>
+    {% endif %}
   </li>
 {% endfor %}
 </ol>
@@ -18,7 +20,9 @@ permalink: /tvshows/
 <ol>
 {% for tvshow in site.tvshows %}
   <li>
-    <a href="{{ tvshow.external_url }}">{{ tvshow.title }}</a>
+    {% if tvshow.path contains 'completed' %}
+      <a href="{{ tvshow.external_url }}">{{ tvshow.title }}</a>
+    {% endif %}
   </li>
 {% endfor %}
 </ol>
