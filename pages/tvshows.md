@@ -7,7 +7,7 @@ permalink: /tvshows/
 
 ## Currently watching
 <ol>
-{% for tvshow in site.tvshows %}
+{% for tvshow in site.tvshows.now %}
   <li>
     <a href="{{ tvshow.external_url }}">{{ tvshow.title }}</a>
   </li>
