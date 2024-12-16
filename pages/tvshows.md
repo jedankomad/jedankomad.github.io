@@ -10,7 +10,7 @@ permalink: /tvshows/
 {% for tvshow in site.tvshows %}
   <li>  
     {% if tvshow.path contains 'current' %}
-      <a href="{{ tvshow.external_url }}">{{ tvshow.title AAAAAAA }}</a>
+      <a href="{{ tvshow.external_url }}">{{ tvshow.title }}</a>
     {% endif %}
   </li>
 {% endfor %}
