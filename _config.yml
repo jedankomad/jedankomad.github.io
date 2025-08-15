@@ -9,18 +9,22 @@ collections:
   movies:
     output: true
     permalink: /movies/:name/
-  anime:
-    output: true
-    permalink: /anime/:name/
-  manga:
-    output: true
-    permalink: /manga/:name/
-  tvshows:
-    output: true
-    permalink: /tvshows/:name/
-  games:
-    output: true
-    permalink: /games/:name/
+###########################################################              !!!!!!!!!!!!!!!!!!!!!!!
+#
+#  anime:
+#    output: true
+#    permalink: /anime/:name/
+#  manga:
+#    output: true
+#    permalink: /manga/:name/
+#  tvshows:
+#    output: true
+#    permalink: /tvshows/:name/
+#  games:
+#    output: true
+#    permalink: /games/:name/
+
+###########################################################              !!!!!!!!!!!!!!!!!!!!!!!
 
 ############################
 # --- Required options --- #
@@ -39,10 +43,17 @@ author: Pavle Saponjic
 navbar-links:
   About Me: "aboutme"
   Movies: "movies"
-  TV Shows: "tvshows"
-  Games: "games"
-  Anime: "anime"
-  Manga: "manga"
+
+###########################################################              !!!!!!!!!!!!!!!!!!!!!!!
+#
+#  TV Shows: "tvshows"
+#  Games: "games"
+#  Anime: "anime"
+#  Manga: "manga"
+# 
+###########################################################              !!!!!!!!!!!!!!!!!!!!!!!          
+
+  
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
 #    - Learn markdown: "https://www.markdowntutorial.com/"
