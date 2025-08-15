@@ -2,7 +2,7 @@ name: Fetch Film Reviews
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Pokreće se na svaki sat
+    - cron: '0 0 * * *'  # Pokreće se na svaki sat
   workflow_dispatch:  # Ručno pokretanje workflow-a
 
 jobs:
