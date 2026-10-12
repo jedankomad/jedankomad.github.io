@@ -90,7 +90,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: Filmovi, misli i ostalo - Jedankomad
+rss-description: Sve o meni - Jedankomad
 
 ###########################
 # --- General options --- #
@@ -131,7 +131,7 @@ edit_page_button: true
 navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
-keywords: "filmovi,letterboxd,blog,jedankomad"
+keywords: "blog,cv,jedankomad"
 
 ######################################
 # --- Colours / background image --- #
