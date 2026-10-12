@@ -1,0 +1,83 @@
+/* Tamno zelena tema (Doctor Doom / Loki / Crocodile).
+   Osnovne boje (pozadina, tekst, linkovi, navbar, footer) su u _config.yml;
+   ovde su dodatni tokeni i preklapanja za delove teme sa zakucanim svetlim bojama. */
+
+:root {
+  color-scheme: dark;
+  --surface-col: #15211a;   /* kartice, pločice */
+  --surface2-col: #1c2b22;  /* hover, izdignute površine */
+  --line-col: #26392d;      /* ivice, razdelnici */
+  --muted-col: #8ea597;     /* sporedni tekst */
+  --accent-col: #34a865;    /* smaragdna - grafikoni, isticanje */
+  --accent-soft: rgba(52, 168, 101, .16);
+  --gold-col: #d9b44a;      /* zlatna - zvezdice, istaknuto */
+  --mid-col: var(--muted-col);
+}
+
+::selection { background: rgba(217, 180, 74, .35); color: #fff; }
+
+h1, h2, h3, h4, h5, h6 { color: #e8f0ea; }
+hr, .post-preview { border-color: var(--line-col); }
+.jumbotron { background: var(--surface-col); }
+
+/* naslov stranice */
+.intro-header .page-heading .page-subheading,
+.intro-header .post-heading .post-subheading { color: var(--muted-col); }
+
+/* navbar - dropdown i mobilni meni */
+.navbar-custom .nav-item.dropdown .dropdown-menu { background-color: var(--navbar-col); border-color: var(--navbar-border-col); }
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item { color: var(--navbar-text-col); }
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item:hover,
+.navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item:focus { color: var(--hover-col); background-color: var(--surface-col); }
+.navbar-custom .navbar-toggler { border-color: var(--line-col); }
+.navbar-custom .navbar-toggler-icon { filter: invert(1); }
+
+.navbar-custom .nav-item.dropdown.show > .nav-link { color: var(--hover-col); }
+
+/* forme */
+input, select, textarea, .form-control {
+  background-color: var(--surface-col); color: var(--text-col); border-color: var(--line-col);
+}
+.form-control:focus { background-color: var(--surface2-col); color: var(--text-col); border-color: var(--accent-col); }
+
+/* tabele */
+table tr { border-top-color: var(--line-col); }
+table tr:nth-child(2n) { background-color: var(--surface-col); }
+table tr th, table tr td { border-color: var(--line-col); }
+
+/* kod */
+code { color: #f0c96b; background-color: var(--surface-col); }
+/* isticanje sintakse - tamna varijanta */
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs, .highlight .cp { color: #6f8a78; }
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .o, .highlight .ow { color: #e8f0ea; }
+.highlight .nf, .highlight .nx, .highlight .nc, .highlight .nb, .highlight .bp { color: #7fd6a4; }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .ss { color: #d9b44a; }
+.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh, .highlight .mo, .highlight .il { color: #e39e6b; }
+.highlight .na, .highlight .nt, .highlight .nv, .highlight .vi { color: #8cc7e8; }
+.highlight .err { color: #ff8a80; background: none; }
+pre, .highlight, pre.highlight { background-color: #0a110d; color: var(--text-col); border-color: var(--line-col); }
+.highlight table tr, .highlight table tr:nth-child(2n) { background: none; }
+
+/* citati i box-ovi */
+blockquote { border-left-color: var(--accent-col); color: var(--muted-col); }
+.box-note, .box-warning, .box-error, .box-success { color: var(--text-col); border: 1px solid var(--line-col); border-left-width: 0.3125rem; }
+.box-note { background-color: var(--surface-col); border-left-color: var(--accent-col); }
+.box-warning { background-color: #2a2512; border-left-color: var(--gold-col); }
+.box-error { background-color: #2c1616; border-left-color: #c0392b; }
+.box-success { background-color: #142a1c; border-left-color: #3cb371; }
+
+/* tagovi i paginacija */
+.blog-tags a, .post-preview .blog-tags a { color: var(--link-col); border-color: var(--line-col); }
+.pagination .page-item .page-link, .pager li a { background-color: var(--surface-col); border-color: var(--line-col); color: var(--text-col); }
+.pagination .page-item .page-link:hover, .pager li a:hover { background-color: var(--hover-col); border-color: var(--hover-col); color: var(--page-col); }
+
+/* pretraga */
+#beautifuljekyll-search-overlay { background: rgba(5, 10, 7, .94); }
+#nav-search-input { background: var(--surface-col); color: var(--text-col); }
+#nav-search-exit { color: var(--muted-col); }
+#nav-search-exit:hover { color: var(--gold-col); }
+#search-results-container a { color: var(--text-col); }
+#search-results-container a:hover { background: var(--surface2-col); box-shadow: none; }
+
+/* scrollbar */
+html { scrollbar-color: #2e4636 var(--page-col); }

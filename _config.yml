@@ -139,17 +139,17 @@ keywords: "filmovi,letterboxd,blog,jedankomad"
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-page-col: "#FFFFFF"
-text-col: "#404040"
-link-col: "#008AFF"
-hover-col: "#0085A1"
-navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
-footer-col: "#EAEAEA"
-footer-text-col: "#777777"
-footer-link-col: "#404040"
-footer-hover-col: "#0085A1"
+page-col: "#0d1510"
+text-col: "#d4e0d7"
+link-col: "#4fd08a"
+hover-col: "#d9b44a"
+navbar-col: "#09100b"
+navbar-text-col: "#cfe0d4"
+navbar-border-col: "#1f3326"
+footer-col: "#09100b"
+footer-text-col: "#8ea597"
+footer-link-col: "#cfe0d4"
+footer-hover-col: "#d9b44a"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
@@ -159,11 +159,11 @@ footer-hover-col: "#0085A1"
 #page-img: "/assets/img/bgimage.png"
 
 # Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
-#mobile-theme-col: "#0085A1"
+mobile-theme-col: "#09100b"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
-#site-css:
-#  - "/assets/css/custom-styles.css"
+site-css:
+  - "/assets/css/custom-styles.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:
