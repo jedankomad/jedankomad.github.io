@@ -1,0 +1,208 @@
+---
+layout: page
+title: Movies
+subtitle: Šta sam gledao i šta mislim o tome
+permalink: /movies/
+full-width: true
+---
+
+<style>
+  .films { --card-bg:#f1f1f1; --ink:#1b1b1b; --muted:#6b6b6b; --accent:#d64545; --line:#e3e3e3;
+    max-width:1100px; margin:0 auto; padding:0 12px 48px; color:var(--ink); }
+  .films-stats { display:flex; flex-wrap:wrap; gap:10px 28px; margin:4px 0 18px; color:var(--muted); font-size:.95rem; }
+  .films-stats strong { color:var(--ink); font-size:1.15rem; margin-right:4px; }
+  .films-controls { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:18px; }
+  .films-controls input[type=search], .films-controls select { height:40px; padding:0 12px; border:1px solid var(--line);
+    border-radius:8px; background:#fff; font-size:.95rem; color:var(--ink); }
+  .films-controls input[type=search] { flex:1 1 220px; min-width:0; }
+  .films-controls label.chk { display:flex; align-items:center; gap:6px; margin:0; font-size:.95rem; color:var(--ink); cursor:pointer; user-select:none; }
+  .film-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:16px; }
+  .film { position:relative; aspect-ratio:2/3; border-radius:8px; overflow:hidden; background:var(--card-bg);
+    cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,.18); transition:transform .18s ease, box-shadow .18s ease; outline:none; }
+  .film:hover, .film:focus-visible { transform:translateY(-4px); box-shadow:0 8px 20px rgba(0,0,0,.28); }
+  .film:focus-visible { box-shadow:0 0 0 3px var(--accent); }
+  .film img { width:100%; height:100%; object-fit:cover; display:block; }
+  .film .noposter { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center;
+    padding:12px; font-weight:700; line-height:1.25; color:#444; background:linear-gradient(160deg,#e9e9e9,#d5d5d5); }
+  .film img.broken { display:none; }
+  .film .cap { position:absolute; left:0; right:0; bottom:0; padding:28px 10px 9px; color:#fff; font-size:.82rem; line-height:1.3;
+    background:linear-gradient(transparent,rgba(0,0,0,.88)); opacity:0; transition:opacity .18s ease; }
+  .film:hover .cap, .film:focus-visible .cap { opacity:1; }
+  .film .cap b { display:block; font-size:.9rem; }
+  .film .cap .st { color:#ffb84d; letter-spacing:1px; }
+  .film .badge { position:absolute; top:7px; right:7px; background:rgba(0,0,0,.72); color:#fff; border-radius:999px;
+    font-size:.7rem; padding:2px 8px; }
+  .films-empty { text-align:center; color:var(--muted); padding:48px 0; display:none; }
+  @media (hover:none) { .film .cap { opacity:1; } }
+  @media (max-width:480px) { .film-grid { grid-template-columns:repeat(auto-fill,minmax(104px,1fr)); gap:10px; } }
+
+  dialog.film-dialog { border:none; border-radius:14px; padding:0; width:min(680px,92vw); max-height:88vh; overflow:auto;
+    box-shadow:0 20px 60px rgba(0,0,0,.45); color:#1b1b1b; background:#fff; }
+  dialog.film-dialog::backdrop { background:rgba(0,0,0,.6); }
+  .fd-wrap { display:flex; gap:20px; padding:22px; }
+  .fd-poster { flex:0 0 170px; }
+  .fd-poster img { width:100%; border-radius:8px; display:block; box-shadow:0 2px 8px rgba(0,0,0,.3); }
+  .fd-poster .noposter { aspect-ratio:2/3; display:flex; align-items:center; justify-content:center; text-align:center; padding:10px;
+    background:#e4e4e4; border-radius:8px; font-weight:700; }
+  .fd-body { flex:1; min-width:0; }
+  .fd-body h2 { margin:0 0 2px; font-size:1.5rem; line-height:1.2; }
+  .fd-meta { color:#6b6b6b; font-size:.9rem; margin-bottom:8px; }
+  .fd-stars { color:#e08a00; font-size:1.2rem; letter-spacing:2px; min-height:1.4em; }
+  .fd-review { margin:12px 0 14px; white-space:pre-line; line-height:1.55; }
+  .fd-none { color:#6b6b6b; font-style:italic; }
+  .fd-link { display:inline-block; padding:7px 14px; border-radius:8px; background:#14171c; color:#fff !important; text-decoration:none !important; font-size:.9rem; }
+  .fd-close { position:absolute; top:8px; right:12px; border:none; background:none; font-size:1.8rem; line-height:1; cursor:pointer; color:#444; }
+  @media (max-width:560px) { .fd-wrap { flex-direction:column; } .fd-poster { flex-basis:auto; width:46%; } }
+</style>
+
+<div class="films" id="films">
+  <div class="films-stats">
+    <span><strong id="st-total">0</strong>filmova</span>
+    <span><strong id="st-avg">–</strong>prosečna ocena</span>
+    <span><strong id="st-rev">0</strong>sa review-om</span>
+  </div>
+
+  <div class="films-controls">
+    <input type="search" id="f-search" placeholder="Pretraži naslov…" aria-label="Pretraži filmove">
+    <select id="f-sort" aria-label="Sortiranje">
+      <option value="newest">Najnovije</option>
+      <option value="oldest">Najstarije</option>
+      <option value="rating">Najbolje ocenjeno</option>
+      <option value="title">Naslov A–Z</option>
+    </select>
+    <label class="chk"><input type="checkbox" id="f-rev"> samo sa review-om</label>
+  </div>
+
+  <div class="film-grid" id="film-grid">
+    {% for m in site.data.movies %}
+    <article class="film" tabindex="0" role="button" aria-label="{{ m.title | escape }}"
+      data-title="{{ m.title | escape }}" data-year="{{ m.year }}" data-rating="{{ m.rating }}"
+      data-date="{{ m.watched }}" data-link="{{ m.link | escape }}" data-poster="{{ m.poster | escape }}"
+      data-rewatch="{% if m.rewatch %}1{% else %}0{% endif %}">
+      {% if m.poster %}<img src="{{ m.poster | escape }}" alt="" loading="lazy" referrerpolicy="no-referrer">{% endif %}
+      <span class="noposter"{% if m.poster %} hidden{% endif %}>{{ m.title | escape }}</span>
+      {% if m.review and m.review != "" %}<span class="badge">review</span>{% endif %}
+      <div class="cap"><b>{{ m.title | escape }}</b>{{ m.year }}{% if m.rating %} · <span class="st">{% assign full = m.rating | floor %}{% assign half = m.rating | minus: full %}{% if full > 0 %}{% for i in (1..full) %}★{% endfor %}{% endif %}{% if half > 0 %}½{% endif %}</span>{% endif %}</div>
+      <div class="rev" hidden>{{ m.review | escape }}</div>
+    </article>
+    {% endfor %}
+  </div>
+  <p class="films-empty" id="films-empty">Nijedan film ne odgovara pretrazi.</p>
+</div>
+
+<dialog class="film-dialog" id="film-dialog" aria-labelledby="fd-title">
+  <button class="fd-close" id="fd-close" aria-label="Zatvori">&times;</button>
+  <div class="fd-wrap">
+    <div class="fd-poster" id="fd-poster"></div>
+    <div class="fd-body">
+      <h2 id="fd-title"></h2>
+      <div class="fd-meta" id="fd-meta"></div>
+      <div class="fd-stars" id="fd-stars"></div>
+      <div class="fd-review" id="fd-review"></div>
+      <a class="fd-link" id="fd-link" href="#" target="_blank" rel="noopener noreferrer">Otvori na Letterboxd-u →</a>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var grid = document.getElementById('film-grid');
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.film'));
+  var q = document.getElementById('f-search'), sortSel = document.getElementById('f-sort'), onlyRev = document.getElementById('f-rev');
+  var empty = document.getElementById('films-empty');
+  var dlg = document.getElementById('film-dialog');
+
+  function stars(r) {
+    if (!r) return '';
+    var full = Math.floor(r), s = '';
+    for (var i = 0; i < full; i++) s += '★';
+    if (r - full >= 0.5) s += '½';
+    return s;
+  }
+  function revOf(c) { return (c.querySelector('.rev').textContent || '').trim(); }
+  function ratingOf(c) { var v = parseFloat(c.dataset.rating); return isNaN(v) ? null : v; }
+  function fmtDate(iso) {
+    var p = (iso || '').split('-'); if (p.length !== 3) return iso || '';
+    return parseInt(p[2], 10) + '.' + parseInt(p[1], 10) + '.' + p[0] + '.';
+  }
+
+  // Poster koji se ne učita -> prikaži naslov umesto njega
+  cards.forEach(function (c) {
+    var img = c.querySelector('img');
+    if (!img) return;
+    img.addEventListener('error', function () {
+      img.classList.add('broken'); c.querySelector('.noposter').hidden = false;
+    });
+  });
+
+  // Statistika (po jedinstvenim ocenjenim unosima)
+  var rated = cards.map(ratingOf).filter(function (v) { return v !== null; });
+  document.getElementById('st-total').textContent = cards.length;
+  document.getElementById('st-rev').textContent = cards.filter(function (c) { return revOf(c) !== ''; }).length;
+  if (rated.length) {
+    var avg = rated.reduce(function (a, b) { return a + b; }, 0) / rated.length;
+    document.getElementById('st-avg').textContent = avg.toFixed(1) + ' ★';
+  }
+
+  function apply() {
+    var term = q.value.trim().toLowerCase();
+    var visible = cards.filter(function (c) {
+      if (term && c.dataset.title.toLowerCase().indexOf(term) === -1) return false;
+      if (onlyRev.checked && revOf(c) === '') return false;
+      return true;
+    });
+    var mode = sortSel.value;
+    visible.sort(function (a, b) {
+      if (mode === 'title') return a.dataset.title.localeCompare(b.dataset.title);
+      if (mode === 'rating') {
+        var ra = ratingOf(a), rb = ratingOf(b);
+        ra = ra === null ? -1 : ra; rb = rb === null ? -1 : rb;
+        if (rb !== ra) return rb - ra;
+      }
+      var cmp = a.dataset.date < b.dataset.date ? -1 : a.dataset.date > b.dataset.date ? 1 : 0;
+      return mode === 'oldest' ? cmp : -cmp;
+    });
+    cards.forEach(function (c) { c.style.display = 'none'; });
+    visible.forEach(function (c) { c.style.display = ''; grid.appendChild(c); });
+    empty.style.display = visible.length ? 'none' : 'block';
+  }
+  q.addEventListener('input', apply);
+  sortSel.addEventListener('change', apply);
+  onlyRev.addEventListener('change', apply);
+
+  function openCard(c) {
+    var posterBox = document.getElementById('fd-poster');
+    posterBox.textContent = '';
+    var src = c.dataset.poster;
+    if (src) {
+      var im = document.createElement('img');
+      im.alt = ''; im.referrerPolicy = 'no-referrer'; im.src = src;
+      im.addEventListener('error', function () { posterBox.textContent = ''; var n = document.createElement('div'); n.className = 'noposter'; n.textContent = c.dataset.title; posterBox.appendChild(n); });
+      posterBox.appendChild(im);
+    } else {
+      var n = document.createElement('div'); n.className = 'noposter'; n.textContent = c.dataset.title; posterBox.appendChild(n);
+    }
+    document.getElementById('fd-title').textContent = c.dataset.title;
+    var meta = [c.dataset.year, 'gledano ' + fmtDate(c.dataset.date)];
+    if (c.dataset.rewatch === '1') meta.push('ponovno gledanje');
+    document.getElementById('fd-meta').textContent = meta.filter(Boolean).join(' · ');
+    document.getElementById('fd-stars').textContent = stars(ratingOf(c));
+    var r = revOf(c), box = document.getElementById('fd-review');
+    box.className = 'fd-review' + (r ? '' : ' fd-none');
+    box.textContent = r || 'Za ovaj film nema review-a, samo ocena.';
+    document.getElementById('fd-link').href = c.dataset.link;
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+  }
+  function closeDlg() { if (typeof dlg.close === 'function') dlg.close(); else dlg.removeAttribute('open'); }
+
+  grid.addEventListener('click', function (e) { var c = e.target.closest('.film'); if (c) openCard(c); });
+  grid.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var c = e.target.closest('.film'); if (c) { e.preventDefault(); openCard(c); }
+  });
+  document.getElementById('fd-close').addEventListener('click', closeDlg);
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) closeDlg(); });  // klik na pozadinu
+
+  apply();
+})();
+</script>
