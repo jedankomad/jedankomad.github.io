@@ -32,6 +32,11 @@ full-width: true
   .film .cap .st { color:#ffb84d; letter-spacing:1px; }
   .film .badge { position:absolute; top:7px; right:7px; background:rgba(0,0,0,.72); color:#fff; border-radius:999px;
     font-size:.7rem; padding:2px 8px; }
+  .featured { margin:0 0 26px; padding:16px 16px 18px; border-radius:12px; background:linear-gradient(135deg,#fff8e6,#fdf0cc); border:1px solid #f0d99a; }
+  .featured .sec-title { margin:0 0 12px; font-size:1.05rem; font-weight:700; color:#8a5a00; }
+  .featured .film-grid { grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:14px; }
+  .featured .film { box-shadow:0 0 0 2px #e0a526, 0 4px 14px rgba(224,165,38,.38); }
+  .featured .film:hover, .featured .film:focus-visible { box-shadow:0 0 0 2px #e0a526, 0 10px 22px rgba(224,165,38,.5); }
   .films-empty { text-align:center; color:var(--muted); padding:48px 0; display:none; }
   @media (hover:none) { .film .cap { opacity:1; } }
   @media (max-width:480px) { .film-grid { grid-template-columns:repeat(auto-fill,minmax(104px,1fr)); gap:10px; } }
@@ -61,6 +66,11 @@ full-width: true
     <span><strong id="st-avg">–</strong>prosečna ocena</span>
     <span><strong id="st-rev">0</strong>sa review-om</span>
   </div>
+
+  <section class="featured" id="featured" hidden>
+    <h3 class="sec-title">★★★★★ Poslednje petice</h3>
+    <div class="film-grid" id="featured-grid"></div>
+  </section>
 
   <div class="films-controls">
     <input type="search" id="f-search" placeholder="Pretraži naslov…" aria-label="Pretraži filmove">
@@ -127,13 +137,14 @@ full-width: true
   }
 
   // Poster koji se ne učita -> prikaži naslov umesto njega
-  cards.forEach(function (c) {
+  function bindPoster(c) {
     var img = c.querySelector('img');
     if (!img) return;
     img.addEventListener('error', function () {
       img.classList.add('broken'); c.querySelector('.noposter').hidden = false;
     });
-  });
+  }
+  cards.forEach(bindPoster);
 
   // Statistika (po jedinstvenim ocenjenim unosima)
   var rated = cards.map(ratingOf).filter(function (v) { return v !== null; });
@@ -195,11 +206,25 @@ full-width: true
   }
   function closeDlg() { if (typeof dlg.close === 'function') dlg.close(); else dlg.removeAttribute('open'); }
 
-  grid.addEventListener('click', function (e) { var c = e.target.closest('.film'); if (c) openCard(c); });
-  grid.addEventListener('keydown', function (e) {
-    if (e.key !== 'Enter' && e.key !== ' ') return;
-    var c = e.target.closest('.film'); if (c) { e.preventDefault(); openCard(c); }
-  });
+  function delegate(container) {
+    container.addEventListener('click', function (e) { var c = e.target.closest('.film'); if (c) openCard(c); });
+    container.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      var c = e.target.closest('.film'); if (c) { e.preventDefault(); openCard(c); }
+    });
+  }
+  delegate(grid);
+
+  // Istaknuto: poslednjih 6 filmova sa ocenom 5 zvezdica
+  var fives = cards.filter(function (c) { var r = ratingOf(c); return r !== null && r >= 5; })
+    .sort(function (a, b) { return a.dataset.date < b.dataset.date ? 1 : a.dataset.date > b.dataset.date ? -1 : 0; })
+    .slice(0, 6);
+  if (fives.length) {
+    var fgrid = document.getElementById('featured-grid');
+    fives.forEach(function (c) { var k = c.cloneNode(true); bindPoster(k); fgrid.appendChild(k); });
+    delegate(fgrid);
+    document.getElementById('featured').hidden = false;
+  }
   document.getElementById('fd-close').addEventListener('click', closeDlg);
   dlg.addEventListener('click', function (e) { if (e.target === dlg) closeDlg(); });  // klik na pozadinu
 
