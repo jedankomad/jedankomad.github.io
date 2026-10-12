@@ -1,5 +1,533 @@
 [
  {
+  "key": "https://letterboxd.com/pavlesap/film/the-book-of-life-2014/1/|2026-10-12",
+  "title": "The Book of Life",
+  "year": 2014,
+  "rating": null,
+  "watched": "2026-10-12",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/the-book-of-life-2014/1/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/1/6/0/5/8/6/160586-the-book-of-life-0-600-0-900-crop.jpg?v=1f8762f070",
+  "review": "Mnogo simpaticno"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/spider-man-brand-new-day/|2026-10-08",
+  "title": "Spider-Man: Brand New Day",
+  "year": 2026,
+  "rating": 4.5,
+  "watched": "2026-10-08",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/spider-man-brand-new-day/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/8/7/2/8/7/1/872871-spider-man-brand-new-day-0-600-0-900-crop.jpg?v=ebe6beb4fc",
+  "review": "Volim svaki Tom Holland spiderman film i ovaj nije izuzetak\n\nJako lepo izgleda, prilicno je primetna promena rezisera\n\nFrank i Hulk su dobar izbor za sporedne likove\n\nPeter Parker je literally me\n\nSamo ne vidim zasto je ovo jedan od najuspesnijih filmova ikada, wtf, al stagod\n\nRadujem se sledecem delu\n\n👍"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/deadpool/1/|2026-10-06",
+  "title": "Deadpool",
+  "year": 2016,
+  "rating": 4.5,
+  "watched": "2026-10-06",
+  "rewatch": true,
+  "link": "https://letterboxd.com/pavlesap/film/deadpool/1/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/2/2/0/5/7/5/220575-deadpool-0-600-0-900-crop.jpg?v=2f726ea9b3",
+  "review": ""
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/roofman/|2026-10-05",
+  "title": "Roofman",
+  "year": 2025,
+  "rating": null,
+  "watched": "2026-10-05",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/roofman/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/2/5/0/3/3/1125033-roofman-0-600-0-900-crop.jpg?v=017b87fa71",
+  "review": ""
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/godzilla-minus-one/|2026-10-05",
+  "title": "Godzilla Minus One",
+  "year": 2023,
+  "rating": 4.0,
+  "watched": "2026-10-05",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/godzilla-minus-one/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/8/4/5/7/0/6/845706-godzilla-minus-one-0-600-0-900-crop.jpg?v=77a601d6de",
+  "review": "Retko zanimljiva ljudska prica za monster film, bas sam se obradovao konkluziji\n\nGodzila je jako kul mada mi je i goofy, voleo bih da se vise istakne njegov karakter ubuduce, ovde je pretezno bio pokretac za (vrlo dobar) ljudski narativ\n\nAtomic breath scene su pakleno dobre"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/the-odyssey-2026/|2026-10-04",
+  "title": "The Odyssey",
+  "year": 2026,
+  "rating": 5.0,
+  "watched": "2026-10-04",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/the-odyssey-2026/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/5/5/3/9/4/1255394-the-odyssey-2026-0-600-0-900-crop.jpg?v=1eed046d0c",
+  "review": "Ima li ovaj covek Nolan granice? Koliko daleko ide tvoja vizija? Ima li rezisera sa impresivnijom sposobnoscu za predstavljanje narativa? Ne postoji minut u kom nisam bio prikovan za ekran. Celih 3 sata. Cela ekipa je pokidala. Stvarno fenomenalno iskustvo.\n\nA ja sam jako glup sto sam cekao ovoliko i propustio imax."
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/avengers-endgame/3/|2026-09-25",
+  "title": "Avengers: Endgame",
+  "year": 2019,
+  "rating": 5.0,
+  "watched": "2026-09-25",
+  "rewatch": true,
+  "link": "https://letterboxd.com/pavlesap/film/avengers-endgame/3/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/2/2/6/6/6/0/226660-avengers-endgame-0-600-0-900-crop.jpg?v=d4006bfd5e",
+  "review": "Ts was so peak man, IMAX je vredeo\n\nNikad vise necemo imati ovakvu kultnu kulminaciju, zar ne?\n\nOsvezenje pred Doomsday. Doomsday mora da kida."
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/the-fall-guy-2024/|2026-09-22",
+  "title": "The Fall Guy",
+  "year": 2024,
+  "rating": 4.0,
+  "watched": "2026-09-22",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/the-fall-guy-2024/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/6/6/7/5/5/0/667550-the-fall-guy-0-600-0-900-crop.jpg?v=5f491a1281",
+  "review": "Shoutout kaskaderima fr\n\nNe postoji komican film gde Rajan nije mega sarmantan"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/hitch-2005/1/|2026-09-15",
+  "title": "Hitch",
+  "year": 2005,
+  "rating": null,
+  "watched": "2026-09-15",
+  "rewatch": true,
+  "link": "https://letterboxd.com/pavlesap/film/hitch-2005/1/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/4/7/6/9/9/47699-hitch-0-600-0-900-crop.jpg?v=432b444bf6",
+  "review": ""
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/i-know-what-you-did-last-summer-2025/|2026-09-10",
+  "title": "I Know What You Did Last Summer",
+  "year": 2025,
+  "rating": null,
+  "watched": "2026-09-10",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/i-know-what-you-did-last-summer-2025/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/6/4/2/9/976429-i-know-what-you-did-last-summer-2025-0-600-0-900-crop.jpg?v=ecdd954a6e",
+  "review": ""
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/mortal-kombat-ii/|2026-09-07",
+  "title": "Mortal Kombat II",
+  "year": 2026,
+  "rating": 3.5,
+  "watched": "2026-09-07",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/mortal-kombat-ii/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/8/3/6/5/7/1/836571-mortal-kombat-ii-0-600-0-900-crop.jpg?v=6fea3b13de",
+  "review": "Akcija krece ODMAH\n\nStori je naravno stagod ali fajtovi, fanservice i banter su super\n\nLiu Kang i Kung Lao? PEAK.\nJohnny Cage i Kano? Peak.\nScorpion i Noob? PEAK.\n\nFajtovi su stvarno verni igrici, svako je pokazao nekoliko svojih iconic komboa, bilo je vrlo zabavno"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/superman-2025/1/|2026-09-05",
+  "title": "Superman",
+  "year": 2025,
+  "rating": 4.5,
+  "watched": "2026-09-05",
+  "rewatch": true,
+  "link": "https://letterboxd.com/pavlesap/film/superman-2025/1/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/9/5/7/0/5/0/957050-superman-2025-0-600-0-900-crop.jpg?v=54e41a55ff",
+  "review": "Rasplacem se kad cujem taj soundtrack...\n\nNeopisivo pozitivan vajb...\n\nThis shit means something to me man!!.. 😭😭"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/jumanji-welcome-to-the-jungle/|2026-09-02",
+  "title": "Jumanji: Welcome to the Jungle",
+  "year": 2017,
+  "rating": 4.0,
+  "watched": "2026-09-02",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/jumanji-welcome-to-the-jungle/",
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/j1/1c/as/56/bUzOyCgsb6FLXco6mxaNufY0joi-0-600-0-900-crop.jpg?v=42a89a6ebb",
+  "review": "Ma peak\n\nNe propustamo ga kada naidje na TVu\n\nMnogo volim dinamiku ovako izmesanih karaktera\n\nRock glumi strebera\nKevin Hart je u svom elementu\nKaren je isto mnogo simpaticna kao smotana devojka \nJack Black glumi popularnu klinku... Obozavam ga totalno se uneo u ulogu\n\nJako zabavan film svaki put"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/guardians-of-the-galaxy-vol-3/|2026-08-28",
+  "title": "Guardians of the Galaxy Vol. 3",
+  "year": 2023,
+  "rating": 4.5,
+  "watched": "2026-08-28",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/guardians-of-the-galaxy-vol-3/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/3/7/9/7/1/1/379711-guardians-of-the-galaxy-volume-3-0-600-0-900-crop.jpg?v=bd023e472c",
+  "review": "Baš lep film, dirljiv i pun emocija\n\nGuardiansi su jako zabavna ekipa i ovo je vrlo lep kraj za trilogiju\n\nNeočekivano srceparajuć backstory za Roketa, wtf\n\nAdam Warlock je zabavan, baš bih voleo da se pojavi u budućim filmovima\n\nJasno se vidi da je James Gunn u pitanju, a njegov stil je za ovakvu priču savršen"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/grand-theft-auto-vi-an-extended-look/|2026-08-28",
+  "title": "Grand Theft Auto VI: An Extended Look",
+  "year": 2026,
+  "rating": null,
+  "watched": "2026-08-28",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/grand-theft-auto-vi-an-extended-look/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/1/6/0/9/8/9/0/1609890-grand-theft-auto-vi-an-extended-look-0-600-0-900-crop.jpg?v=467b6becd6",
+  "review": "Jason je mid, Lucia deluje kul, gameplay isti ko dosad (ništa strašno), prilično insane grafike, ostaje samo da ne nerfuju grafike na kraju kao npr Watch Dogs i Rainbow Six Siege\n\nRockstar su totalni neotesani govnari, pre svega što igra tek sledeće godine izlazi na PC. Znači totalni šljam od kompanije. Greedy fucks\n\nMfs will log anything"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/shang-chi-and-the-legend-of-the-ten-rings/|2026-08-25",
+  "title": "Shang-Chi and the Legend of the Ten Rings",
+  "year": 2021,
+  "rating": null,
+  "watched": "2026-08-25",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/shang-chi-and-the-legend-of-the-ten-rings/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/4/9/4/9/6/9/494969-shang-chi-and-the-legend-of-the-ten-rings-0-600-0-900-crop.jpg?v=49ce6b6893",
+  "review": "Nije lose al nije ni nista posebno, eto koreografija je dobra\n\nNije esencijalan za Doomsday"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/one-piece-film-god-valley/|2026-08-23",
+  "title": "ONE PIECE FILM GOD VALLEY",
+  "year": null,
+  "rating": 5.0,
+  "watched": "2026-08-23",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/one-piece-film-god-valley/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/1/6/1/9/7/0/8/1619708-one-piece-film-god-valley-0-600-0-900-crop.jpg?v=bf836d7b41",
+  "review": "WE WILL BE SEATED"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/the-fantastic-4-first-steps/|2026-08-21",
+  "title": "The Fantastic 4: First Steps",
+  "year": 2025,
+  "rating": 3.0,
+  "watched": "2026-08-21",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/the-fantastic-4-first-steps/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/5/4/3/9/6/7/543967-the-fantastic-four-first-steps-0-600-0-900-crop.jpg?v=ab7c919b04",
+  "review": "Solidno, dobra ekipa, dobra estetika\n\nMalo mi je iffy sve pri kraju od kad je Galaktus došao na Zemlju al aj\n\nDrago mi je da je narod/svet uključen u priču, pogotovo ono pripremanje za Galaktusday\n\nVolim što je Latveria sedište na samitu bilo prazno LOOL"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/porco-rosso/|2026-08-17",
+  "title": "Porco Rosso",
+  "year": 1992,
+  "rating": null,
+  "watched": "2026-08-17",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/porco-rosso/",
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/pf/lk/cj/4e/nCx0EESDNxwXGn7rkCU6cvXTpIB-0-600-0-900-crop.jpg?v=67361260f7",
+  "review": "Standardno za ghibli, simpaticno je i tjt. Redak ghibli gde nisam zaspao\n\nPadala nam je kiša pa je bilo i atmosferično"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/project-hail-mary/1/|2026-08-03",
+  "title": "Project Hail Mary",
+  "year": 2026,
+  "rating": 5.0,
+  "watched": "2026-08-03",
+  "rewatch": true,
+  "link": "https://letterboxd.com/pavlesap/film/project-hail-mary/1/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/6/1/1/2/8/8/611288-project-hail-mary-0-600-0-900-crop.jpg?v=ac31b6ec03",
+  "review": "Rajan je toliko nenormalno šarmantan lik i Rokija obožavamo\n\nStvarno neverovatno pozitivna energija, moći ću ovo ponovo gledati mnogo puta\n\nMama reče da je divan film 👍👍👍👍"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/hot-fuzz/|2026-07-30",
+  "title": "Hot Fuzz",
+  "year": 2007,
+  "rating": 4.0,
+  "watched": "2026-07-30",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/hot-fuzz/",
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/xe/2y/e6/gy/4XLSKzQcE4lIgJgd71Y8UhAhxqQ-0-600-0-900-crop.jpg?v=45bc32b708",
+  "review": "Kakav gas jbt hahahah film ide i ne staje\n\nLudi britanci"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/us-2019/|2026-07-27",
+  "title": "Us",
+  "year": 2019,
+  "rating": 2.5,
+  "watched": "2026-07-27",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/us-2019/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/3/9/0/5/2/0/390520-us-0-600-0-900-crop.jpg?v=968884c876",
+  "review": "Dobra ideja lose izvedena\n\nSrednja/niza klasa alegorija je kul\n\nPrva polovina je samo ok, druga je mogla da je izvuce al ne\n\nObjasnjeni \"protivnici\" ne prate nikakvu logiku, kao pod kontrolom su ali opet nisu\n\nI poslednji twist je šašav. Kul al šašav"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/memories-of-murder/|2026-07-25",
+  "title": "Memories of Murder",
+  "year": 2003,
+  "rating": 4.5,
+  "watched": "2026-07-25",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/memories-of-murder/",
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/84/xt/e8/mw/gawnVe9cFowdoDLo9Pok12NTw39-0-600-0-900-crop.jpg?v=7cad204593",
+  "review": "Mnogo smesnih scena koje ne uticu na ozbiljnost filma\n\nMnogo dropkickovanja\n\nMnoooogo lud i uticajan kraj"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/obsession-2025/|2026-07-04",
+  "title": "Obsession",
+  "year": 2025,
+  "rating": 3.0,
+  "watched": "2026-07-04",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/obsession-2025/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/3/4/4/7/2/1234472-obsession-2025-2-0-600-0-900-crop.jpg?v=cff6fc00b6",
+  "review": ""
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/how-to-train-your-dragon/|2026-07-01",
+  "title": "How to Train Your Dragon",
+  "year": 2010,
+  "rating": 4.5,
+  "watched": "2026-07-01",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/how-to-train-your-dragon/",
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/0r/r7/c6/7e/hIXX3IRFy0InUOmYeWjvhCAgQNj-0-600-0-900-crop.jpg?v=d158027eb4",
+  "review": "Opet mi se place I love these guys"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/the-invisible-man-2020/|2026-06-14",
+  "title": "The Invisible Man",
+  "year": 2020,
+  "rating": 3.5,
+  "watched": "2026-06-14",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/the-invisible-man-2020/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/4/9/9/0/8/5/499085-the-invisible-man-0-600-0-900-crop.jpg?v=b9561b767f",
+  "review": "Elizabet Moss je super\n\nDosta one-take scena najs\n\nVolimo dobru osvetu"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/passengers-2016/1/|2026-06-12",
+  "title": "Passengers",
+  "year": 2016,
+  "rating": 3.5,
+  "watched": "2026-06-12",
+  "rewatch": true,
+  "link": "https://letterboxd.com/pavlesap/film/passengers-2016/1/",
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/7v/7c/8u/gl/mJJV2pv6Dh1WiZV0SxfuFSvXWfV-0-600-0-900-crop.jpg?v=1d896aa116",
+  "review": ""
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/maverick/|2026-06-04",
+  "title": "Maverick",
+  "year": 1994,
+  "rating": null,
+  "watched": "2026-06-04",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/maverick/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/4/7/2/3/6/47236-maverick-0-600-0-900-crop.jpg?v=1c3a6203e1",
+  "review": ""
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/despicable-me-4/|2026-05-13",
+  "title": "Despicable Me 4",
+  "year": 2024,
+  "rating": 2.0,
+  "watched": "2026-05-13",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/despicable-me-4/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/4/4/8/5/0/6/448506-despicable-me-4-0-600-0-900-crop.jpg?v=e3dceb2dac",
+  "review": "Plot samo ne postoji\n\nSamo bacaju gag forice (neke i smešne) i to je to\n\nPoslednja scena je jako dobra\n\nKad bih imao dinar za svaki film koji se završava sa Everybody Wants To Rule The World..."
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/project-hail-mary/|2026-04-18",
+  "title": "Project Hail Mary",
+  "year": 2026,
+  "rating": 4.5,
+  "watched": "2026-04-18",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/project-hail-mary/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/6/1/1/2/8/8/611288-project-hail-mary-0-600-0-900-crop.jpg?v=ac31b6ec03",
+  "review": "Volim vas, Roki i Grejs, statement."
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/one-piece-stampede/|2026-04-08",
+  "title": "One Piece: Stampede",
+  "year": 2019,
+  "rating": 4.0,
+  "watched": "2026-04-08",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/one-piece-stampede/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/4/9/6/4/3/5/496435-one-piece-stampede-0-600-0-900-crop.jpg?v=1286d373cc",
+  "review": "Cist fanservice koji ne staje sa borbama od pocetka do kraja\n\nPojavljuje se jedno 50 likova i to me samo baca na razmisljanje koliko insane ce pravi finalni One Piece rat biti\n\nOno sto je Luffy uradio na kraju… THAT’S WHY HE’S THE GOAT! THE GOATTTT!!!!\n\nVrlo zabavno!!"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/fall-2022/|2026-04-04",
+  "title": "Fall",
+  "year": 2022,
+  "rating": null,
+  "watched": "2026-04-04",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/fall-2022/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/8/8/7/6/2/1/887621-fall-0-600-0-900-crop.jpg?v=6bf31e9474",
+  "review": "gledao sa mamom i ispreskakali smo pola filma. Tolko smara."
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/dune-part-two/1/|2026-04-02",
+  "title": "Dune: Part Two",
+  "year": 2024,
+  "rating": 4.5,
+  "watched": "2026-04-02",
+  "rewatch": true,
+  "link": "https://letterboxd.com/pavlesap/film/dune-part-two/1/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/6/1/7/4/4/3/617443-dune-part-two-0-600-0-900-crop.jpg?v=cc533700f8",
+  "review": "Koliko je kriminalno to što home release nije u IMAX aspect ratio-u nego su sve scene isečene"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/skyscraper-live/|2026-03-29",
+  "title": "Skyscraper Live",
+  "year": 2026,
+  "rating": null,
+  "watched": "2026-03-29",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/skyscraper-live/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/1/4/6/7/7/1/7/1467717-skyscraper-live-0-600-0-900-crop.jpg?v=b4808a9713",
+  "review": "Voleo bih da sam ovo gledao uzivo, Alex je stvarno jedno neverovatno bice"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/zoolander/|2026-03-28",
+  "title": "Zoolander",
+  "year": 2001,
+  "rating": 4.5,
+  "watched": "2026-03-28",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/zoolander/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/4/7/1/9/8/47198-zoolander-0-600-0-900-crop.jpg?v=b30902c672",
+  "review": "MAGNUM LOOKSMAXXING"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/prisoners/|2026-03-25",
+  "title": "Prisoners",
+  "year": 2013,
+  "rating": 3.5,
+  "watched": "2026-03-25",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/prisoners/",
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/iw/eg/4g/nm/3w79tTsv6tmlT8Jww6snyPrgVok-0-600-0-900-crop.jpg?v=778c7ae8b8",
+  "review": "Dobar film, drzi paznju sve vreme\n\nI Hugh i Jake odlicno glume, licno volim i Dastmalhijana\n\nMisterija ok, nije mi neki neverovatan reveal\n\nKraj me je obradovao"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/ne-zha-2/1/|2026-03-25",
+  "title": "Ne Zha 2",
+  "year": 2025,
+  "rating": 4.5,
+  "watched": "2026-03-25",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/ne-zha-2/1/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/8/8/2/7/4/5/882745-ne-zha-2-0-600-0-900-crop.jpg?v=b4dc6ec8f9",
+  "review": "HOLY FUCKING SHITTTTTTTTT\n\nKINEZI SU SAMO RESILI DA NAPRAVE JEDAN OD NAJIMPRESIVNIJIH ANIMIRANIH FILMOVA IKADA\n\nKINESKA MITOLOGIJA JE TAKO DIVNA"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/first-man/1/|2026-03-24",
+  "title": "First Man",
+  "year": 2018,
+  "rating": null,
+  "watched": "2026-03-24",
+  "rewatch": true,
+  "link": "https://letterboxd.com/pavlesap/film/first-man/1/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/3/0/5/8/1/1/305811-first-man-0-600-0-900-crop.jpg?v=4b9c3337c8",
+  "review": "Dobar film, podseca me koliko podcenjujemo ovakvo izvanredno ljudsko postignuce\n\nCela finalna sekvenca je vrlo napeta\n\nIznenadilo me je da je reziser Damien Chazelle lol\n\nI baba i ja smo ga rewatchovali :)"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/one-battle-after-another/|2026-03-23",
+  "title": "One Battle After Another",
+  "year": 2025,
+  "rating": 3.5,
+  "watched": "2026-03-23",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/one-battle-after-another/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/9/5/1/2/7/7/951277-one-battle-after-another-0-600-0-900-crop.jpg?v=d27c4cc662",
+  "review": "STANI NA BRDU KAZEM JA\n\nJurnjava na kraju je bila krejzi napeta\n\nSolidan film, ne vidim kako je vredan onolikih oskara, al eto, bilo je zabavno"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/uncharted-2022/|2026-03-22",
+  "title": "Uncharted",
+  "year": 2022,
+  "rating": null,
+  "watched": "2026-03-22",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/uncharted-2022/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/2/6/4/3/2/8/264328-uncharted-0-600-0-900-crop.jpg?v=988669139a",
+  "review": ""
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/spider-man-across-the-spider-verse/1/|2026-03-13",
+  "title": "Spider-Man: Across the Spider-Verse",
+  "year": 2023,
+  "rating": 5.0,
+  "watched": "2026-03-13",
+  "rewatch": true,
+  "link": "https://letterboxd.com/pavlesap/film/spider-man-across-the-spider-verse/1/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/4/9/7/6/3/1/497631-spider-man-across-the-spider-verse-0-600-0-900-crop.jpg?v=f2acbf1b8a",
+  "review": "Jednog dana dobicemo i taj treci film!!!\n\nTacno se setim kakav je bio dozivljaj gledati ovo prvi put kada niko nije ocekivao OVOLIKI kvalitet. Samo smo svi sedeli zapanjeni.\n\nI dalje sam fasciniran koliko je prelep film... svaki prokleti frejm je umetnost. Ne znam da li je ikada vise truda uneto u bilo kakvu animaciju"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/wonka/|2026-03-07",
+  "title": "Wonka",
+  "year": 2023,
+  "rating": null,
+  "watched": "2026-03-07",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/wonka/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/7/0/6/0/8/3/706083-wonka-0-600-0-900-crop.jpg?v=d4bd6afd7f",
+  "review": "Vrlo šarmantno ngl"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/final-destination-5/|2026-03-07",
+  "title": "Final Destination 5",
+  "year": 2011,
+  "rating": null,
+  "watched": "2026-03-07",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/final-destination-5/",
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/0e/kp/hn/3l/nDzbtN56RXRJL4mpFZ3mdAW6so2-0-600-0-900-crop.jpg?v=356b9f312f",
+  "review": "Nekoliko iconic traumatičnih smrti i fire twist na kraju"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/salt-2010/|2026-03-06",
+  "title": "Salt",
+  "year": 2010,
+  "rating": null,
+  "watched": "2026-03-06",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/salt-2010/",
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/it/c4/ci/lz/v2BgmcQkl6Y0rosbMJPlQNKx8H0-0-600-0-900-crop.jpg?v=6eaa8b52f2",
+  "review": ""
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/maid-in-manhattan/|2026-03-04",
+  "title": "Maid in Manhattan",
+  "year": 2002,
+  "rating": null,
+  "watched": "2026-03-04",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/maid-in-manhattan/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/4/8/0/5/5/48055-maid-in-manhattan-0-600-0-900-crop.jpg?v=3865a954ce",
+  "review": ""
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/free-solo/|2026-03-04",
+  "title": "Free Solo",
+  "year": 2018,
+  "rating": 5.0,
+  "watched": "2026-03-04",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/free-solo/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/4/4/4/6/1/7/444617-free-solo-0-600-0-900-crop.jpg?v=36aa06d8b2",
+  "review": "Ljudska volja i dostignuće toliko impresivni da mi se plače"
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/deadly-inn/|2026-02-26",
+  "title": "Deadly Inn",
+  "year": 2018,
+  "rating": null,
+  "watched": "2026-02-26",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/deadly-inn/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/4/3/0/0/6/4/430064-deadly-inn-0-600-0-900-crop.jpg?v=dc55e31329",
+  "review": ""
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/harry-potter-and-the-deathly-hallows-part-2/|2026-02-25",
+  "title": "Harry Potter and the Deathly Hallows: Part 2",
+  "year": 2011,
+  "rating": null,
+  "watched": "2026-02-25",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/harry-potter-and-the-deathly-hallows-part-2/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/4/4/5/8/0/44580-harry-potter-and-the-deathly-hallows-part-2-0-600-0-900-crop.jpg?v=66f3769773",
+  "review": ""
+ },
+ {
   "key": "https://letterboxd.com/pavlesap/film/companion-2025/|2025-09-26",
   "title": "Companion",
   "year": 2025,
@@ -7,7 +535,7 @@
   "watched": "2025-09-26",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/companion-2025/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/alternative-backdrop/9/7/7/1/7/2/tmdb/3KjdRYgPC5o12NWNL0PaBmsBDz8-1200-1200-675-675-crop-000000.jpg?v=ff13eb645f",
   "review": ""
  },
  {
@@ -18,8 +546,19 @@
   "watched": "2025-09-25",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/f1/1/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/j8/ma/xb/4d/f1-1200-1200-675-675-crop-000000.jpg?v=4d478b1250",
   "review": ""
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/loki-2021/|2025-09-22",
+  "title": "Loki",
+  "year": 2021,
+  "rating": 5.0,
+  "watched": "2025-09-22",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/loki-2021/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/6/7/1/8/1/5/671815-loki-0-600-0-900-crop.jpg?v=f9c17cfc8d",
+  "review": "Loki je legit jedna od najboljih stvari koje je MCU ikada izbacio i Loki mi je postao jedan od omiljenih likova ikada\n\nIma samo 12 epizoda, cmon ljudi.\n\nESSENTIAL WATCH ZA DOOMSDAY."
  },
  {
   "key": "https://letterboxd.com/pavlesap/film/dawn-of-the-planet-of-the-apes/2/|2025-09-19",
@@ -29,7 +568,7 @@
   "watched": "2025-09-19",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/dawn-of-the-planet-of-the-apes/2/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/3f/jp/tr/c4/dawn-planet-apes-1200-1200-675-675-crop-000000.jpg?v=49076ef694",
   "review": ""
  },
  {
@@ -40,7 +579,7 @@
   "watched": "2025-09-16",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/the-lost-city-2022/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/tz/89/8o/jx/lost%20city-1200-1200-675-675-crop-000000.jpg?v=ac5a590ea6",
   "review": ""
  },
  {
@@ -51,7 +590,7 @@
   "watched": "2025-09-16",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/rise-of-the-planet-of-the-apes/1/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/h9/wk/52/ro/rise-planet-of-the-apes-110-1200-1200-675-675-crop-000000.jpg?v=ba7346832b",
   "review": ""
  },
  {
@@ -62,7 +601,7 @@
   "watched": "2025-09-09",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/transformers-rise-of-the-beasts/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/ko/id/qv/k4/transformers-1200-1200-675-675-crop-000000.jpg?v=2d6b2fb4aa",
   "review": ""
  },
  {
@@ -73,7 +612,7 @@
   "watched": "2025-08-25",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/hitch-2005/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/fh/dl/88/2m/hitch-1200-1200-675-675-crop-000000.jpg?v=f9e03d9106",
   "review": ""
  },
  {
@@ -84,7 +623,7 @@
   "watched": "2025-08-19",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/superman-2025/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/alternative-backdrop/9/5/7/0/5/0/tmdb/eGX66zonvc4bXg3rM08RUxdYSDx-1200-1200-675-675-crop-000000.jpg?v=dc1a5219f9",
   "review": ""
  },
  {
@@ -95,7 +634,7 @@
   "watched": "2025-08-13",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/once-upon-a-time-in-hollywood/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/3m/w9/ku/pt/once-upon-a-time-in-hollywood-1200-1200-675-675-crop-000000.jpg?v=4bbee2b818",
   "review": ""
  },
  {
@@ -106,7 +645,7 @@
   "watched": "2025-08-09",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/midsommar/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/5q/jr/xl/0r/midsommar-1200-1200-675-675-crop-000000.jpg?v=620571be01",
   "review": ""
  },
  {
@@ -117,7 +656,7 @@
   "watched": "2025-07-29",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/the-substance/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/ju/7r/z4/9i/xfSVZf7naMoGuqoHaQhbvfPrfWs-1200-1200-675-675-crop-000000.jpg?v=adde104f43",
   "review": ""
  },
  {
@@ -128,7 +667,7 @@
   "watched": "2025-07-22",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/spider-man-no-way-home/1/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/3j/1m/pc/b8/spider-man-1200-1200-675-675-crop-000000.jpg?v=e9571e778c",
   "review": ""
  },
  {
@@ -139,7 +678,7 @@
   "watched": "2025-07-18",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/the-sixth-sense/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/bn/hc/0u/en/sixthsense-1200-1200-675-675-crop-000000.jpg?v=96b2ba2a1e",
   "review": ""
  },
  {
@@ -150,7 +689,7 @@
   "watched": "2025-07-18",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/next-goal-wins-2023/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/lp/ic/zn/ns/next%20goal-1200-1200-675-675-crop-000000.jpg?v=aabf43df82",
   "review": ""
  },
  {
@@ -161,7 +700,7 @@
   "watched": "2025-06-30",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/top-gun-maverick/1/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/ah/66/ey/4h/top-gun-maverick-1200-1200-675-675-crop-000000.jpg?v=b2526db888",
   "review": ""
  },
  {
@@ -172,7 +711,7 @@
   "watched": "2025-06-25",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/f1/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/j8/ma/xb/4d/f1-1200-1200-675-675-crop-000000.jpg?v=4d478b1250",
   "review": ""
  },
  {
@@ -183,7 +722,7 @@
   "watched": "2025-06-25",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/f1-the-movie/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/j8/ma/xb/4d/f1-1200-1200-675-675-crop-000000.jpg?v=4d478b1250",
   "review": ""
  },
  {
@@ -194,7 +733,7 @@
   "watched": "2025-06-21",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/dungeons-dragons-honor-among-thieves/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/yu/xu/6f/m1/5LVROyoFaTvGoXDYf9gq7NVU8Sj-1200-1200-675-675-crop-000000.jpg?v=8f518c14b6",
   "review": ""
  },
  {
@@ -205,7 +744,7 @@
   "watched": "2025-06-12",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/hollow-man/1/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/5s/oc/qi/d6/hollow-man-1200-1200-675-675-crop-000000.jpg?v=0ea66cbdc3",
   "review": ""
  },
  {
@@ -216,7 +755,7 @@
   "watched": "2025-06-11",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/the-teachers-lounge-2023/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/g8/e8/kg/17/teacher-1200-1200-675-675-crop-000000.jpg?v=5cf421e182",
   "review": ""
  },
  {
@@ -227,7 +766,7 @@
   "watched": "2025-06-06",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/murder-on-the-orient-express-2017/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/14/lz/74/qx/murder-on-orient-express-1200-1200-675-675-crop-000000.jpg?v=d4418747c7",
   "review": ""
  },
  {
@@ -238,7 +777,7 @@
   "watched": "2025-05-26",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/tomb-raider/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/gd/z2/ex/qu/tomb-raider-1200-1200-675-675-crop-000000.jpg?v=d5bf5b5d56",
   "review": ""
  },
  {
@@ -249,7 +788,7 @@
   "watched": "2025-05-20",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/journey-to-the-center-of-the-earth-2008/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/rd/d0/kv/xp/journey-center-of-the-earth-2008-1200-1200-675-675-crop-000000.jpg?v=a81ea64b57",
   "review": ""
  },
  {
@@ -260,7 +799,7 @@
   "watched": "2025-05-15",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/cars-3/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/kd/am/4j/9n/cars-3-1200-1200-675-675-crop-000000.jpg?v=cf38f6e67e",
   "review": ""
  },
  {
@@ -271,7 +810,7 @@
   "watched": "2025-05-13",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/thunderbolts/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/38/f6/km/as/thunderbolts-1200-1200-675-675-crop-000000.jpg?v=d1603150dd",
   "review": ""
  },
  {
@@ -282,7 +821,7 @@
   "watched": "2025-05-12",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/arrival-2016/1/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/oa/m7/ho/3a/arrival-2016-1200-1200-675-675-crop-000000.jpg?v=a5173b53c7",
   "review": ""
  },
  {
@@ -293,7 +832,7 @@
   "watched": "2025-05-06",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/sinners-2025/1/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/x1/ne/1h/4u/sinners-1200-1200-675-675-crop-000000.jpg?v=60c0af98f0",
   "review": ""
  },
  {
@@ -304,7 +843,7 @@
   "watched": "2025-05-06",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/adolescence-2025/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/alternative-backdrop/1/3/2/6/8/2/8/tmdb/nil2ISKAie7PVfNsKmdGsOCqBD1-1200-1200-675-675-crop-000000.jpg?v=d8cd6884fc",
   "review": ""
  },
  {
@@ -315,7 +854,7 @@
   "watched": "2025-04-27",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/sinners-2025/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/x1/ne/1h/4u/sinners-1200-1200-675-675-crop-000000.jpg?v=60c0af98f0",
   "review": ""
  },
  {
@@ -326,7 +865,7 @@
   "watched": "2025-04-09",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/home-invasion-2016/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/film-poster/3/1/5/6/6/5/315665-home-invasion-0-230-0-345-crop.jpg?v=87436ab0ff",
   "review": ""
  },
  {
@@ -337,7 +876,7 @@
   "watched": "2025-04-09",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/a-minecraft-movie/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/my/mk/mx/qi/c5S7U7Uvv1lzKraEaRAa63bDR8l-1200-1200-675-675-crop-000000.jpg?v=167bacd98f",
   "review": ""
  },
  {
@@ -348,7 +887,7 @@
   "watched": "2025-04-06",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/tropic-thunder/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/y5/kf/ij/h6/tropic-thunder-1200-1200-675-675-crop-000000.jpg?v=d79773fc2f",
   "review": ""
  },
  {
@@ -359,7 +898,7 @@
   "watched": "2025-03-29",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/kung-fu-panda/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/q8/hk/5s/lu/kung-fu-panda-110-1200-1200-675-675-crop-000000.jpg?v=8d62e7df56",
   "review": ""
  },
  {
@@ -370,7 +909,7 @@
   "watched": "2025-02-16",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/bad-boys-ride-or-die/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/af/eg/3z/xp/gRApXuxWmO2forYTuTmcz5RaNUV-1200-1200-675-675-crop-000000.jpg?v=011558dd9d",
   "review": ""
  },
  {
@@ -381,7 +920,7 @@
   "watched": "2025-01-18",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/cast-away/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/35/5b/po/qx/cast-away-1200-1200-675-675-crop-000000.jpg?v=b51474ae6c",
   "review": ""
  },
  {
@@ -392,7 +931,7 @@
   "watched": "2025-01-17",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/top-gun-maverick/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/ah/66/ey/4h/top-gun-maverick-1200-1200-675-675-crop-000000.jpg?v=b2526db888",
   "review": ""
  },
  {
@@ -403,7 +942,7 @@
   "watched": "2025-01-17",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/ice-age-the-meltdown/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/ry/oi/je/i1/ice-age-meltdown-160-1200-1200-675-675-crop-000000.jpg?v=f278242c34",
   "review": ""
  },
  {
@@ -414,7 +953,7 @@
   "watched": "2025-01-09",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/one-piece-fan-letter/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/vw/ys/93/cy/dxsomuwvCcqYQHpUKnfjMN2z1s8-1200-1200-675-675-crop-000000.jpg?v=3b13dbb047",
   "review": ""
  },
  {
@@ -425,7 +964,7 @@
   "watched": "2025-01-07",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/ice-age/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/sm/upload/7l/o4/09/6a/ice-age-30-1200-1200-675-675-crop-000000.jpg?v=231e192723",
   "review": ""
  },
  {
@@ -436,7 +975,7 @@
   "watched": "2025-01-03",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/we-are-not-angels-3-rock-roll-strike-back/",
-  "poster": null,
+  "poster": "https://a.ltrbxd.com/resized/film-poster/2/9/6/6/4/29664-we-are-not-angels-3-rock-roll-strike-back-0-230-0-345-crop.jpg?v=b5b79fec75",
   "review": ""
  },
  {
@@ -504,5 +1043,16 @@
   "link": "https://letterboxd.com/pavlesap/film/zodiac/",
   "poster": null,
   "review": ""
+ },
+ {
+  "key": "https://letterboxd.com/pavlesap/film/avengers-endgame/2/|2019-04-26",
+  "title": "Avengers: Endgame",
+  "year": 2019,
+  "rating": 4.5,
+  "watched": "2019-04-26",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/avengers-endgame/2/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/2/2/6/6/6/0/226660-avengers-endgame-0-600-0-900-crop.jpg?v=d4006bfd5e",
+  "review": "Dolazak u skolu nakon sto je film izasao a ja ga jos nisam odgledao je bio moj canon event\n\nNeopisivo iskustvo, ceo bioskop je tapsao, uzdahivao, urlao i plakao\n\nPrakticno neponovljiv event"
  }
 ]
