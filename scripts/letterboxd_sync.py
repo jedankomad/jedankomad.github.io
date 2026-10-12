@@ -23,7 +23,7 @@ NS = {
     "tmdb": "https://themoviedb.org",
     "dc": "http://purl.org/dc/elements/1.1/",
 }
-MAX_POSTER_LOOKUPS = 40
+MAX_POSTER_LOOKUPS = 60
 
 
 def http_get(url, timeout=30):
@@ -99,6 +99,9 @@ def parse_item(item):
         "link": link,
         "poster": poster,
         "review": review,
+        # True = ocenu i review smo pročitali iz RSS-a, pa prazan review zaista znači "nema review-a".
+        # Starije unose koje RSS više ne vraća nemaju ovo polje: njihov review je nepoznat.
+        "detail": True,
     }
 
 
@@ -107,17 +110,53 @@ def film_page_url(link):
     return f"https://letterboxd.com/film/{m.group(1)}/" if m else None
 
 
+POSTER_RE = r'https://a\.ltrbxd\.com/resized/film-poster/[^"\'\s<>]+'
+
+
+def is_real_poster(url):
+    """Poster ima proporcije 2:3 (npr. ...-0-600-0-900-crop), backdrop je široka slika
+    (npr. ...-1200-1200-675-675-crop ili putanja sa 'backdrop'). Putanja NIJE pouzdana:
+    pravi posteri mogu biti i pod /film-poster/ i pod /sm/upload/."""
+    if not url or "backdrop" in url:
+        return False
+    m = re.search(r"-(\d+)-(\d+)-(\d+)-(\d+)-crop", url)
+    if not m:
+        return "/film-poster/" in url
+    x0, w, y0, h = (int(g) for g in m.groups())
+    return x0 == 0 and y0 == 0 and w > 0 and 1.3 < h / w < 1.7
+
+
+def poster_from_page(page):
+    """Izvlači POSTER (ne backdrop) iz HTML-a stranice filma. og:image se namerno ignoriše."""
+    # JSON-LD blok filma sadrži polje "image" sa posterom
+    m = re.search(r'"image"\s*:\s*"(' + POSTER_RE + ')"', page)
+    if m:
+        return html.unescape(m.group(1).replace("\\/", "/"))
+    return None
+
+
 def lookup_poster(link):
-    """Najbolji pokušaj: og:image sa stranice filma. Greške se tiho ignorišu."""
+    """Najbolji pokušaj, greške se tiho ignorišu. Vraća (url, metod) ili (None, razlog)."""
     url = film_page_url(link)
     if not url:
-        return None
+        return None, "nevalidan link"
     try:
         page = http_get(url, timeout=20)
-    except Exception:
-        return None
-    m = re.search(r'<meta[^>]+property="og:image"[^>]+content="([^"]+)"', page)
-    return html.unescape(m.group(1)) if m else None
+    except Exception as e:
+        return None, f"stranica nedostupna ({e})"
+    p = poster_from_page(page)
+    if p:
+        return p, "json-ld"
+    # rezerva: Letterboxd-ov endpoint za poster
+    slug = url.rstrip("/").rsplit("/", 1)[-1]
+    try:
+        frag = http_get(f"https://letterboxd.com/ajax/poster/film/{slug}/std/230x345/", timeout=20)
+        m = re.search(POSTER_RE, frag)
+        if m:
+            return html.unescape(m.group(0)), "ajax"
+    except Exception as e:
+        return None, f"ajax nedostupan ({e})"
+    return None, "poster nije pronadjen na stranici"
 
 
 def load():
@@ -149,15 +188,23 @@ def main():
         else:
             added += 1
         movies[e["key"]] = e
-    # Posteri za stare unose bez postera (best effort)
-    looked = 0
+    # Posteri za unose bez postera ILI sa slikom koja nije pravi poster (npr. backdrop)
+    looked = fixed = 0
     for m in movies.values():
-        if not m.get("poster") and looked < MAX_POSTER_LOOKUPS:
-            looked += 1
-            p = lookup_poster(m["link"])
-            if p:
-                m["poster"] = p
-            time.sleep(1)
+        if is_real_poster(m.get("poster")) or looked >= MAX_POSTER_LOOKUPS:
+            continue
+        looked += 1
+        p, how = lookup_poster(m["link"])
+        if p and is_real_poster(p):
+            m["poster"] = p
+            fixed += 1
+            print(f"  poster OK [{how}]: {m['title']}")
+        else:
+            # pogrešnu sliku radije uklanjamo nego prikazujemo
+            m["poster"] = None
+            print(f"  poster NIJE nadjen: {m['title']} -> {how}")
+        time.sleep(1)
+    print(f"Provereno postera: {looked}, ispravljeno/dodato: {fixed}")
     out = sorted(movies.values(), key=lambda m: (m["watched"], m["key"]), reverse=True)
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
