@@ -2,6 +2,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- rezervna ograničenja dok se CSS ne učita, da velike slike ne bljesnu preko ekrana -->
+  <style>
+    html { background: {{ site.page-col | default: "#FFFFFF" }}; }
+    .avatar-img { width: 100px; height: auto; }
+    .post-preview img { max-width: 12rem; max-height: 12rem; }
+  </style>
+
   {% capture pagetitle %}
     {%- if page.share-title -%}
       {{ page.share-title | strip_html | xml_escape }}

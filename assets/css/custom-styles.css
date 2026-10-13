@@ -29,10 +29,18 @@ hr, .post-preview { border-color: var(--line-col); }
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item { color: var(--navbar-text-col); }
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item:hover,
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item:focus { color: var(--hover-col); background-color: var(--surface-col); }
+/* avatar ima width/height u HTML-u (da ne bljesne preko ekrana pre CSS-a); visinu vodi širina */
+.navbar-custom .avatar-container .avatar-img { height: auto; }
 .navbar-custom .navbar-toggler { border-color: var(--line-col); }
 .navbar-custom .navbar-toggler-icon { filter: invert(1); }
 
 .navbar-custom .nav-item.dropdown.show > .nav-link { color: var(--hover-col); }
+
+/* dropdown se otvara i na hover (desktop sa mišem); klik i dalje radi */
+@media (min-width: 1200px) and (hover: hover) {
+  .navbar-custom .nav-item.dropdown:hover > .dropdown-menu { display: block; }
+  .navbar-custom .nav-item.dropdown:hover > .nav-link { color: var(--hover-col); }
+}
 
 /* forme */
 input, select, textarea, .form-control {
