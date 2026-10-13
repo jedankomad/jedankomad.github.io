@@ -54,6 +54,10 @@ layout: page
         Posted on {{ post.date | date: date_format }}
       </p>
 
+      {% if post.youtube %}
+        {% include youtube.html id=post.youtube start=post.youtube-start title=post.title %}
+      {% endif %}
+
       {% if thumbnail != "" %}
       <div class="post-image post-image-small">
         <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">

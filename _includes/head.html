@@ -112,6 +112,8 @@
   {%- capture img -%}
     {%- if page.share-img -%}
       {{ page.share-img }}
+    {%- elsif page.youtube -%}
+      https://img.youtube.com/vi/{{ page.youtube }}/maxresdefault.jpg
     {%- elsif page.cover-img -%}
       {%- if page.cover-img.first -%}
         {{ page.cover-img[0].first.first }}

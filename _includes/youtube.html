@@ -1,0 +1,6 @@
+<div class="yt-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/{{ include.id }}?rel=0{% if include.start %}&amp;start={{ include.start }}{% endif %}"
+    title="{{ include.title | strip_html | escape }}" loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
