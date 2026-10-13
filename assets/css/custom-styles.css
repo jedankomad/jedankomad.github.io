@@ -24,6 +24,9 @@ hr, .post-preview { border-color: var(--line-col); }
 .intro-header .page-heading .page-subheading,
 .intro-header .post-heading .post-subheading { color: var(--muted-col); }
 
+/* podnaslov koji je citat (subtitle-quote: true u zaglavlju stranice) */
+.subheading-quote { font-style: italic; }
+
 /* navbar - dropdown i mobilni meni */
 .navbar-custom .nav-item.dropdown .dropdown-menu { background-color: var(--navbar-col); border-color: var(--navbar-border-col); }
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item { color: var(--navbar-text-col); }
@@ -31,8 +34,11 @@ hr, .post-preview { border-color: var(--line-col); }
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item:focus { color: var(--hover-col); background-color: var(--surface-col); }
 /* avatar ima width/height u HTML-u (da ne bljesne preko ekrana pre CSS-a); visinu vodi širina */
 .navbar-custom .avatar-container .avatar-img { height: auto; }
-.navbar-custom .navbar-toggler { border-color: var(--line-col); }
-.navbar-custom .navbar-toggler-icon { filter: invert(1); }
+/* dugme za meni na telefonu - zlatne crtice */
+.navbar-custom .navbar-toggler { border-color: rgba(217, 180, 74, .5); }
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%23d9b44a' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
 
 .navbar-custom .nav-item.dropdown.show > .nav-link { color: var(--hover-col); }
 

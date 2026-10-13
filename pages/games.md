@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Games
-subtitle: Uskoro
+subtitle: Hesitation is defeat
+subtitle-quote: true
 permalink: /games/
 ---
 
