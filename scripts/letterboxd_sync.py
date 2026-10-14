@@ -110,7 +110,8 @@ def film_page_url(link):
     return f"https://letterboxd.com/film/{m.group(1)}/" if m else None
 
 
-POSTER_RE = r'https://a\.ltrbxd\.com/resized/film-poster/[^"\'\s<>]+'
+# posteri su i pod /resized/film-poster/ i pod /resized/sm/upload/; da li je slika zaista poster proverava is_real_poster
+POSTER_RE = r'https://a\.ltrbxd\.com/resized/(?:film-poster|sm/upload)/[^"\'\s<>]+'
 
 
 def is_real_poster(url):

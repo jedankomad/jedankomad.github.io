@@ -1,0 +1,48 @@
+# Omiljene igre, prikazuju se na /games/ ovim redom.
+# appid je broj iz Steam linka (store.steampowered.com/app/<appid>/); naslovnica se uzima sa Steam-a.
+# Igra koja nije na Steam-u: izostavi appid i dodaj  cover: /assets/img/...  i  link: https://...
+
+- title: Dishonored
+  appid: 205100
+  year: 2012
+  studio: Arkane Studios
+
+- title: Dishonored 2
+  appid: 403640
+  year: 2016
+  studio: Arkane Studios
+
+- title: Outer Wilds
+  appid: 753640
+  year: 2019
+  studio: Mobius Digital
+
+- title: "Sekiro: Shadows Die Twice"
+  appid: 814380
+  year: 2019
+  studio: FromSoftware
+
+- title: Stellaris
+  appid: 281990
+  year: 2016
+  studio: Paradox Development Studio
+
+- title: Dark Souls III
+  appid: 374320
+  year: 2016
+  studio: FromSoftware
+
+- title: Cyberpunk 2077
+  appid: 1091500
+  year: 2020
+  studio: CD Projekt Red
+
+- title: "HITMAN: World of Assassination"
+  appid: 1659040
+  year: 2016–2021
+  studio: IO Interactive
+
+- title: Broforce
+  appid: 274190
+  year: 2015
+  studio: Free Lives

@@ -1,0 +1,59 @@
+---
+layout: page
+title: Games
+subtitle: Hesitation is defeat
+subtitle-quote: true
+permalink: /games/
+full-width: true
+---
+
+<style>
+  .games { max-width:1100px; margin:0 auto; padding:0 12px 48px; }
+  .games-head { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:6px 20px; margin:4px 0 18px; }
+  .games-head h3 { margin:0; font-size:1.15rem; font-weight:700; }
+  .games-head a { font-size:.9rem; color:var(--muted-col); }
+  .games-head a:hover { color:var(--gold-col); }
+  .game-grid { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+  .game-grid li { width:calc((100% - 4 * 20px) / 5); }
+  .game { position:relative; display:block; aspect-ratio:2/3; border-radius:10px; overflow:hidden; background:var(--surface-col);
+    box-shadow:0 2px 8px rgba(0,0,0,.5); transition:transform .18s ease, box-shadow .18s ease; }
+  .game img { width:100%; height:100%; object-fit:cover; display:block; }
+  .game .nocover { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; padding:12px;
+    font-weight:700; color:var(--muted-col); background:linear-gradient(160deg,var(--surface2-col),var(--surface-col)); }
+  .game .cap { position:absolute; left:0; right:0; bottom:0; padding:36px 12px 11px; color:#fff; font-family:var(--header-font);
+    font-size:.82rem; line-height:1.35; background:linear-gradient(transparent,rgba(0,0,0,.9)); opacity:0; transition:opacity .18s ease; }
+  .game .cap b { display:block; font-size:.95rem; margin-bottom:2px; }
+  .game .cap span { color:#cfd8d2; }
+  .game:hover, .game:focus-visible { transform:translateY(-4px); outline:none;
+    box-shadow:0 0 0 2px var(--gold-col), 0 10px 24px rgba(0,0,0,.6); }
+  .game:hover .cap, .game:focus-visible .cap { opacity:1; }
+  @media (hover:none) { .game .cap { opacity:1; padding-top:28px; } }
+  @media (max-width:900px) { .game-grid li { width:calc((100% - 3 * 16px) / 4); } .game-grid { gap:16px; } }
+  @media (max-width:600px) { .game-grid li { width:calc((100% - 2 * 12px) / 3); } .game-grid { gap:12px; }
+    .game .cap { font-size:.72rem; padding:22px 8px 8px; } .game .cap b { font-size:.8rem; } .game .cap span { display:none; } }
+</style>
+
+<div class="games">
+  <div class="games-head">
+    <h3>Omiljene</h3>
+    <a href="https://steamcommunity.com/id/jopa4561/" target="_blank" rel="noopener"><i class="fab fa-steam" aria-hidden="true"></i> Steam profil ↗</a>
+  </div>
+
+  <ul class="game-grid">
+    {% for g in site.data.games %}
+    {% if g.appid %}
+      {% capture cover %}https://cdn.cloudflare.steamstatic.com/steam/apps/{{ g.appid }}/library_600x900.jpg{% endcapture %}
+      {% capture link %}https://store.steampowered.com/app/{{ g.appid }}/{% endcapture %}
+    {% else %}
+      {% assign cover = g.cover | relative_url %}
+      {% assign link = g.link %}
+    {% endif %}
+    <li>
+      <a class="game" href="{{ link }}" target="_blank" rel="noopener" title="{{ g.title | escape }}">
+        {% if g.appid or g.cover %}<img src="{{ cover }}" alt="{{ g.title | escape }}" loading="lazy">{% else %}<span class="nocover">{{ g.title | escape }}</span>{% endif %}
+        <div class="cap"><b>{{ g.title | escape }}</b><span>{{ g.year }}{% if g.studio %} · {{ g.studio | escape }}{% endif %}</span></div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

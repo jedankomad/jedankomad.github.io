@@ -36,6 +36,8 @@ full-width: true
   .featured { margin:0 0 26px; padding:16px 16px 18px; border-radius:12px; background:linear-gradient(135deg,rgba(217,180,74,.13),rgba(217,180,74,.04)); border:1px solid rgba(217,180,74,.35); }
   .featured .sec-title { margin:0 0 12px; font-size:1.05rem; font-weight:700; color:var(--gold-col); }
   .featured .film-grid { grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:14px; }
+  /* na desktopu tačno 6 kolona, koliko ima i poslednjih petica, da red bude pun */
+  @media (min-width:900px) { .featured .film-grid { grid-template-columns:repeat(6,minmax(0,1fr)); } }
   .featured .film { box-shadow:0 0 0 2px var(--gold-col), 0 4px 14px rgba(217,180,74,.25); }
   .featured .film:hover, .featured .film:focus-visible { box-shadow:0 0 0 2px var(--gold-col), 0 10px 24px rgba(217,180,74,.4); }
   .films-empty { text-align:center; color:var(--muted); padding:48px 0; display:none; }
