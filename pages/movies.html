@@ -41,6 +41,14 @@ full-width: true
   .featured .film { box-shadow:0 0 0 2px var(--gold-col), 0 4px 14px rgba(217,180,74,.25); }
   .featured .film:hover, .featured .film:focus-visible { box-shadow:0 0 0 2px var(--gold-col), 0 10px 24px rgba(217,180,74,.4); }
   .films-empty { text-align:center; color:var(--muted); padding:48px 0; display:none; }
+  .film-pager { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:6px; margin-top:22px; }
+  .film-pager button { min-width:38px; height:38px; padding:0 10px; border-radius:8px; border:1px solid var(--line);
+    background:var(--card-bg); color:var(--ink); font-family:var(--header-font); font-size:.9rem; cursor:pointer; }
+  .film-pager button:hover:not(:disabled) { border-color:var(--accent); color:var(--accent); }
+  .film-pager button[aria-current="page"] { background:var(--accent); border-color:var(--accent); color:#0d1510; font-weight:700; }
+  .film-pager button:disabled { opacity:.35; cursor:default; }
+  .film-pager .gap { color:var(--muted); padding:0 2px; }
+  .film-pager .info { flex-basis:100%; text-align:center; color:var(--muted); font-size:.85rem; margin-top:4px; }
   @media (hover:none) { .film .cap { opacity:1; } }
   @media (max-width:480px) { .film-grid { grid-template-columns:repeat(auto-fill,minmax(104px,1fr)); gap:10px; } }
 
@@ -101,6 +109,7 @@ full-width: true
     {% endfor %}
   </div>
   <p class="films-empty" id="films-empty">Nijedan film ne odgovara pretrazi.</p>
+  <nav class="film-pager" id="film-pager" aria-label="Strane"></nav>
 </div>
 
 <dialog class="film-dialog" id="film-dialog" aria-labelledby="fd-title">
@@ -176,10 +185,79 @@ full-width: true
       var cmp = a.dataset.date < b.dataset.date ? -1 : a.dataset.date > b.dataset.date ? 1 : 0;
       return mode === 'oldest' ? cmp : -cmp;
     });
-    cards.forEach(function (c) { c.style.display = 'none'; });
-    visible.forEach(function (c) { c.style.display = ''; grid.appendChild(c); });
+    visible.forEach(function (c) { grid.appendChild(c); });
+    shown = visible;
     empty.style.display = visible.length ? 'none' : 'block';
+    showPage(1, false);
+    setHash(false);
   }
+
+  // Listanje: sve je učitano, prikazuje se samo jedna strana (4 reda) bez promene linka
+  var ROWS = 4, pager = document.getElementById('film-pager'), shown = [], page = 1;
+  function perPage() {
+    var cols = getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length || 1;
+    return cols * ROWS;
+  }
+  function pageCount() { return Math.max(1, Math.ceil(shown.length / perPage())); }
+  // broj strane u linku (#strana-3): ista stranica, bez ponovnog učitavanja; Back i osvežavanje rade
+  function hashPage() { var m = location.hash.match(/^#strana-(\d+)$/); return m ? parseInt(m[1], 10) : 1; }
+  function setHash(push) {
+    var url = page > 1 ? '#strana-' + page : location.pathname + location.search;
+    if ((page > 1 ? '#strana-' + page : '') === location.hash) return;
+    history[push ? 'pushState' : 'replaceState'](null, '', url);
+  }
+  window.addEventListener('popstate', function () { showPage(hashPage(), true); });
+
+  function showPage(n, scroll) {
+    var per = perPage();
+    lastPer = per;
+    page = Math.min(Math.max(1, n), pageCount());
+    var from = (page - 1) * per, to = from + per;
+    cards.forEach(function (c) { c.style.display = 'none'; });
+    shown.slice(from, to).forEach(function (c) { c.style.display = ''; });
+    renderPager(from, Math.min(to, shown.length));
+    if (scroll) {
+      var top = document.querySelector('.films-controls').getBoundingClientRect().top;
+      if (top < 0) window.scrollBy({ top: top - 70, behavior: 'smooth' });  // 70 = visina navbara
+    }
+  }
+  function renderPager(from, to) {
+    pager.textContent = '';
+    var total = pageCount();
+    if (total < 2) return;
+    function btn(label, target, opts) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.textContent = label;
+      if (opts && opts.aria) b.setAttribute('aria-label', opts.aria);
+      if (target === page && !(opts && opts.nav)) b.setAttribute('aria-current', 'page');
+      if (target < 1 || target > total) b.disabled = true;
+      b.addEventListener('click', function () { showPage(target, true); setHash(true); });
+      pager.appendChild(b);
+    }
+    function gap() { var s = document.createElement('span'); s.className = 'gap'; s.textContent = '…'; pager.appendChild(s); }
+    btn('‹', page - 1, { nav: true, aria: 'Prethodna strana' });
+    // 1 … oko trenutne … poslednja
+    var nums = [1, total];
+    for (var i = page - 1; i <= page + 1; i++) if (i > 1 && i < total) nums.push(i);
+    if (page <= 3) nums.push(2, 3, 4); if (page >= total - 2) nums.push(total - 1, total - 2, total - 3);
+    nums = nums.filter(function (v, i, a) { return v >= 1 && v <= total && a.indexOf(v) === i; }).sort(function (a, b) { return a - b; });
+    nums.forEach(function (v, i) { if (i && v - nums[i - 1] > 1) gap(); btn(String(v), v, { aria: 'Strana ' + v }); });
+    btn('›', page + 1, { nav: true, aria: 'Sledeća strana' });
+    var info = document.createElement('div'); info.className = 'info';
+    info.textContent = (from + 1) + '–' + to + ' od ' + shown.length;
+    pager.appendChild(info);
+  }
+  // promena širine menja broj kolona: zadrži prvi prikazani film na ekranu
+  var lastPer = 0, rt;
+  window.addEventListener('resize', function () {
+    clearTimeout(rt);
+    rt = setTimeout(function () {
+      var per = perPage(); if (per === lastPer) return;
+      var first = (page - 1) * lastPer;
+      showPage(Math.floor(first / per) + 1, false);
+      setHash(false);
+    }, 150);
+  });
   q.addEventListener('input', apply);
   sortSel.addEventListener('change', apply);
   onlyRev.addEventListener('change', apply);
@@ -231,6 +309,8 @@ full-width: true
   document.getElementById('fd-close').addEventListener('click', closeDlg);
   dlg.addEventListener('click', function (e) { if (e.target === dlg) closeDlg(); });  // klik na pozadinu
 
+  var startPage = hashPage();
   apply();
+  if (startPage > 1) { showPage(startPage, false); setHash(false); }
 })();
 </script>
