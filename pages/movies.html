@@ -17,7 +17,7 @@ full-width: true
     border-radius:8px; background:var(--surface-col); font-size:.95rem; color:var(--ink); }
   .films-controls input[type=search] { flex:1 1 220px; min-width:0; }
   .films-controls label.chk { display:flex; align-items:center; gap:6px; margin:0; font-size:.95rem; color:var(--ink); cursor:pointer; user-select:none; }
-  .film-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:16px; }
+  .film-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:16px; align-content:start; }
   .film { position:relative; aspect-ratio:2/3; border-radius:8px; overflow:hidden; background:var(--card-bg);
     cursor:pointer; box-shadow:0 1px 3px rgba(0,0,0,.5); transition:transform .18s ease, box-shadow .18s ease; outline:none; }
   .film:hover, .film:focus-visible { transform:translateY(-4px); box-shadow:0 8px 22px rgba(0,0,0,.6), 0 0 0 1px rgba(79,208,138,.35); }
