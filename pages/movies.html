@@ -216,9 +216,24 @@ full-width: true
     cards.forEach(function (c) { c.style.display = 'none'; });
     shown.slice(from, to).forEach(function (c) { c.style.display = ''; });
     renderPager(from, Math.min(to, shown.length));
+    // grid uvek zauzima visinu punih 4 reda (i na kraćoj poslednjoj strani), da strane ne skaču
+    var first = shown[from];
+    if (first && pageCount() > 1) {
+      var gap = parseFloat(getComputedStyle(grid).rowGap) || 0;
+      grid.style.minHeight = (ROWS * first.offsetHeight + (ROWS - 1) * gap) + 'px';
+    } else {
+      grid.style.minHeight = '';
+    }
+    // posle klika na stranu: vrh liste (pretraga) uvek odmah ispod navigacije
     if (scroll) {
-      var top = document.querySelector('.films-controls').getBoundingClientRect().top;
-      if (top < 0) window.scrollBy({ top: top - 70, behavior: 'smooth' });  // 70 = visina navbara
+      // navigacija se pri skrolovanju smanji (top-nav-short, bez padding-a); računamo tu, krajnju visinu
+      var nav = document.querySelector('.navbar'), navH = 60;
+      if (nav) {
+        var cs = getComputedStyle(nav);
+        navH = nav.offsetHeight - (nav.classList.contains('top-nav-short') ? 0 : parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom));
+      }
+      var top = document.querySelector('.films-controls').getBoundingClientRect().top - navH - 12;
+      if (Math.abs(top) > 2) window.scrollBy({ top: top, behavior: 'smooth' });
     }
   }
   function renderPager(from, to) {
