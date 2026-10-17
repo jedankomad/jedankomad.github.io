@@ -27,6 +27,11 @@ full-width: true
   .game:hover, .game:focus-visible { transform:translateY(-4px); outline:none;
     box-shadow:0 0 0 2px var(--gold-col), 0 10px 24px rgba(0,0,0,.6); }
   .game:hover .cap, .game:focus-visible .cap { opacity:1; }
+  /* naginjanje prema mišu (skripta ispod) + odsjaj koji prati kursor */
+  .game .glare { position:absolute; inset:0; pointer-events:none; opacity:0; transition:opacity .2s ease;
+    background:radial-gradient(circle at var(--gx,50%) var(--gy,50%), rgba(255,236,190,.30), rgba(255,236,190,0) 55%); }
+  .game.tilting { transition:transform .08s linear, box-shadow .18s ease; }
+  .game.tilting .glare { opacity:1; }
   @media (hover:none) { .game .cap { opacity:1; padding-top:28px; } }
   @media (max-width:900px) { .game-grid li { width:calc((100% - 3 * 16px) / 4); } .game-grid { gap:16px; } }
   @media (max-width:600px) { .game-grid li { width:calc((100% - 2 * 12px) / 3); } .game-grid { gap:12px; }
@@ -51,9 +56,29 @@ full-width: true
     <li>
       <a class="game" href="{{ link }}" target="_blank" rel="noopener" title="{{ g.title | escape }}">
         {% if g.appid or g.cover %}<img src="{{ cover }}" alt="{{ g.title | escape }}" loading="lazy">{% else %}<span class="nocover">{{ g.title | escape }}</span>{% endif %}
+        <span class="glare" aria-hidden="true"></span>
         <div class="cap"><b>{{ g.title | escape }}</b><span>{{ g.year }}{% if g.studio %} · {{ g.studio | escape }}{% endif %}</span></div>
       </a>
     </li>
     {% endfor %}
   </ul>
 </div>
+
+<script>
+(function () {
+  // samo za miš (ne na telefonu) i samo ako u sistemu nisu smanjene animacije
+  if (!matchMedia('(hover:hover) and (pointer:fine)').matches || matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  var MAX = 7;  // najveći nagib u stepenima
+  document.querySelectorAll('.game').forEach(function (el) {
+    el.addEventListener('mousemove', function (e) {
+      var r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+      el.classList.add('tilting');
+      el.style.transform = 'perspective(700px) translateY(-4px) rotateX(' + ((0.5 - y) * 2 * MAX).toFixed(2) +
+        'deg) rotateY(' + ((x - 0.5) * 2 * MAX).toFixed(2) + 'deg) scale(1.03)';
+      el.style.setProperty('--gx', (x * 100).toFixed(1) + '%');
+      el.style.setProperty('--gy', (y * 100).toFixed(1) + '%');
+    });
+    el.addEventListener('mouseleave', function () { el.classList.remove('tilting'); el.style.transform = ''; });
+  });
+})();
+</script>

@@ -100,3 +100,33 @@ html { scrollbar-color: #2e4636 var(--page-col); }
 .yt-embed { position: relative; aspect-ratio: 16 / 9; margin: 0.75rem 0 1.25rem; border-radius: 10px; overflow: hidden;
   background: #000; border: 1px solid var(--line-col); box-shadow: 0 6px 20px rgba(0, 0, 0, .45); }
 .yt-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* --- Animacije (sve se gase uz "smanji animacije" u sistemu) --- */
+
+/* prelaz između stranica: stranica se pretopi, navigacija ostaje mirna */
+@view-transition { navigation: auto; }
+.navbar-custom { view-transition-name: site-nav; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
+
+/* magla u pozadini: boja ide na html, telo je providno, a magla je između njih */
+html { background-color: var(--page-col); }
+body { background-color: transparent; }
+body::before {
+  content: ""; position: fixed; inset: -25%; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(38% 32% at 22% 28%, rgba(52, 168, 101, .11), transparent 70%),
+    radial-gradient(34% 40% at 78% 68%, rgba(52, 168, 101, .08), transparent 70%),
+    radial-gradient(28% 26% at 62% 22%, rgba(217, 180, 74, .045), transparent 70%),
+    radial-gradient(30% 34% at 30% 82%, rgba(40, 120, 80, .07), transparent 70%);
+  animation: fog-drift 70s ease-in-out infinite alternate;
+}
+@keyframes fog-drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(4%, -3%, 0) scale(1.06); }
+  100% { transform: translate3d(-3%, 4%, 0) scale(1.03); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  body::before { animation: none; }
+}
