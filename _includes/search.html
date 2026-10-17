@@ -1,18 +1,129 @@
 {% if site.post_search %}
 
-<div id="beautifuljekyll-search-overlay">
+<div id="beautifuljekyll-search-overlay" role="dialog" aria-label="Pretraga sajta">
 
-  <div id="nav-search-exit" title="Exit search">✕</div>
-  <input type="text" id="nav-search-input" placeholder="Search">
-  <ul id="search-results-container"></ul>
-  
-  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <div id="nav-search-exit" title="Zatvori (Esc)">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Pretraži filmove, igre, postove…" autocomplete="off" spellcheck="false"
+    aria-controls="search-results-container">
+  <p class="sr-hint">Ctrl+K ili / otvara pretragu · ↑ ↓ biraju · Enter otvara · Esc zatvara</p>
+  <ul id="search-results-container" role="listbox"></ul>
+
   <script>
-    SimpleJekyllSearch({
-      searchInput: document.getElementById('nav-search-input'),
-      resultsContainer: document.getElementById('search-results-container'),
-      json: '{{ site.baseurl }}/assets/data/searchcorpus.json' 
+  (function () {
+    var overlay = document.getElementById('beautifuljekyll-search-overlay');
+    var input = document.getElementById('nav-search-input');
+    var list = document.getElementById('search-results-container');
+    var CORPUS = '{{ "/assets/data/searchcorpus.json" | relative_url }}';
+    var MOVIES_URL = '{{ "/movies/" | relative_url }}', GAMES_URL = '{{ "/games/" | relative_url }}';
+    var data = null, loading = null, items = [], active = -1;
+
+    // bez kvačica i velikih slova, da "cudo" nađe "čudo" (dužina teksta ostaje ista, zbog isticanja)
+    function norm(s) {
+      return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd');
+    }
+    function load() {
+      if (!loading) loading = fetch(CORPUS).then(function (r) { return r.json(); }).then(function (d) { data = prep(d); render(); });
+      return loading;
+    }
+    function stars(r) { if (!r) return ''; var f = Math.floor(r), s = ''; for (var i = 0; i < f; i++) s += '★'; return s + (r - f >= .5 ? '½' : ''); }
+    function fmtDate(iso) { var p = (iso || '').split('-'); return p.length === 3 ? (+p[2]) + '.' + (+p[1]) + '.' + p[0] + '.' : ''; }
+
+    function prep(d) {
+      // filmove gledane više puta prikazujemo jednom (poslednje gledanje, uz broj gledanja)
+      var byFilm = {}, movies = [];
+      d.movies.forEach(function (m) {
+        var id = (m.l || '').replace(/\/\d+\/$/, '/');
+        if (byFilm[id]) { byFilm[id].n++; return; }
+        byFilm[id] = { kind: 'movie', t: m.t, n: 1, m: m };
+        movies.push(byFilm[id]);
+      });
+      movies.forEach(function (x) {
+        var m = x.m;
+        x.meta = [m.y, stars(m.r), 'gledano ' + fmtDate(m.d) + (x.n > 1 ? ' · ' + x.n + '×' : '')].filter(Boolean).join(' · ');
+        x.img = m.p; x.url = MOVIES_URL + '?film=' + encodeURIComponent(m.l + '|' + m.d);
+      });
+      var games = d.games.map(function (g) {
+        return { kind: 'game', t: g.t, meta: [g.y, g.s].filter(Boolean).join(' · '), url: GAMES_URL,
+          img: g.c || (g.a ? 'https://cdn.cloudflare.steamstatic.com/steam/apps/' + g.a + '/library_600x900.jpg' : null) };
+      });
+      var posts = d.posts.map(function (p) { return { kind: 'post', t: p.t, meta: [p.s, fmtDate(p.d)].filter(Boolean).join(' · '), url: p.u }; });
+      var pages = d.pages.map(function (p) { return { kind: 'page', t: p.t, meta: p.s || '', url: p.u }; });
+      return [].concat(pages, posts, games, movies).map(function (x) { x.key = norm(x.t); return x; });
+    }
+
+    var GROUPS = [['page', 'Stranice', 4], ['post', 'Postovi', 5], ['game', 'Igre', 6], ['movie', 'Filmovi', 12]];
+    function score(x, words, q) {
+      for (var i = 0; i < words.length; i++) if (x.key.indexOf(words[i]) === -1) return -1;
+      if (x.key === q) return 0;
+      if (x.key.indexOf(q) === 0) return 1;
+      if ((' ' + x.key).indexOf(' ' + words[0]) !== -1) return 2;
+      return 3;
+    }
+    function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+    function mark(title, words) {
+      // istakni pogođeni deo naslova (poređenje bez kvačica, isticanje u originalu)
+      var n = norm(title), hit = [];
+      words.forEach(function (w) { var i = n.indexOf(w); if (i !== -1) for (var k = i; k < i + w.length; k++) hit[k] = 1; });
+      var out = '', open = false;
+      for (var i = 0; i < title.length; i++) {
+        if (hit[i] && !open) { out += '<mark>'; open = true; }
+        if (!hit[i] && open) { out += '</mark>'; open = false; }
+        out += esc(title[i]);
+      }
+      return out + (open ? '</mark>' : '');
+    }
+
+    function render() {
+      list.textContent = ''; items = []; active = -1;
+      if (!data) { if (input.value.trim()) list.innerHTML = '<li class="sr-msg">Učitavam…</li>'; return; }
+      var q = norm(input.value.trim());
+      if (!q) return;
+      var words = q.split(/\s+/), html = '', total = 0;
+      GROUPS.forEach(function (g) {
+        var hits = data.filter(function (x) { return x.kind === g[0]; })
+          .map(function (x) { return { x: x, s: score(x, words, q) }; })
+          .filter(function (h) { return h.s >= 0; })
+          .sort(function (a, b) { return a.s - b.s || a.x.t.localeCompare(b.x.t); });
+        if (!hits.length) return;
+        total += hits.length;
+        html += '<li class="sr-group">' + g[1] + (hits.length > g[2] ? ' <span>(' + g[2] + ' od ' + hits.length + ')</span>' : '') + '</li>';
+        hits.slice(0, g[2]).forEach(function (h) {
+          var x = h.x;
+          html += '<li><a class="sr-item sr-' + x.kind + '" href="' + esc(x.url) + '" role="option">' +
+            (x.img ? '<img src="' + esc(x.img) + '" alt="" loading="lazy" referrerpolicy="no-referrer">' : '<span class="sr-ico" aria-hidden="true">' + (x.kind === 'post' ? '✎' : '§') + '</span>') +
+            '<span class="sr-text"><b>' + mark(x.t, words) + '</b>' + (x.meta ? '<small>' + esc(x.meta) + '</small>' : '') + '</span></a></li>';
+        });
+      });
+      list.innerHTML = total ? html : '<li class="sr-msg">Ništa za „' + esc(input.value.trim()) + '“.</li>';
+      items = [].slice.call(list.querySelectorAll('.sr-item'));
+      if (items.length) setActive(0);
+    }
+    function setActive(i) {
+      if (active >= 0 && items[active]) items[active].classList.remove('active');
+      active = i;
+      if (items[i]) { items[i].classList.add('active'); items[i].scrollIntoView({ block: 'nearest' }); }
+    }
+
+    function open() {
+      overlay.style.display = 'block';
+      document.body.classList.add('overflow-hidden');
+      input.focus(); input.select();
+      load();
+    }
+    input.addEventListener('focus', load);
+    input.addEventListener('input', render);
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown' && items.length) { e.preventDefault(); setActive((active + 1) % items.length); }
+      else if (e.key === 'ArrowUp' && items.length) { e.preventDefault(); setActive((active - 1 + items.length) % items.length); }
+      else if (e.key === 'Enter' && items[active]) { e.preventDefault(); location.href = items[active].href; }
     });
+    // Ctrl+K / Cmd+K ili "/" otvara pretragu sa bilo koje stranice (osim dok se kuca u polje)
+    document.addEventListener('keydown', function (e) {
+      var typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName) || document.activeElement.isContentEditable;
+      if ((e.key === 'k' || e.key === 'K') && (e.ctrlKey || e.metaKey)) { e.preventDefault(); open(); }
+      else if (e.key === '/' && !typing) { e.preventDefault(); open(); }
+    });
+  })();
   </script>
 </div>
 

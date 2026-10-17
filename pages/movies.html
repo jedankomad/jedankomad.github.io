@@ -334,5 +334,13 @@ full-width: true
   var startPage = hashPage();
   apply();
   if (startPage > 1) { showPage(startPage, false); setHash(false); }
+
+  // otvoreno iz pretrage sajta: /movies/?film=<link>|<datum> -> upiši naslov u pretragu i otvori detalje
+  var want = new URLSearchParams(location.search).get('film');
+  if (want) {
+    var hit = cards.filter(function (c) { return c.dataset.link + '|' + c.dataset.date === want; })[0];
+    history.replaceState(null, '', location.pathname);
+    if (hit) { q.value = hit.dataset.title; apply(); openCard(hit); }
+  }
 })();
 </script>
