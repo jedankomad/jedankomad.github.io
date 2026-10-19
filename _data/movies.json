@@ -1,9 +1,21 @@
 [
  {
+  "key": "https://letterboxd.com/pavlesap/film/the-karate-kid/|2026-10-19",
+  "title": "The Karate Kid",
+  "year": 1984,
+  "rating": 4.0,
+  "watched": "2026-10-19",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/the-karate-kid/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/5/0/7/1/8/50718-the-karate-kid-0-600-0-900-crop.jpg?v=afdad7bbc0",
+  "review": "Mr Miyagi je tako kul 🙏",
+  "detail": true
+ },
+ {
   "key": "https://letterboxd.com/pavlesap/film/tenzing/|2026-10-17",
   "title": "Tenzing",
   "year": 2026,
-  "rating": 4.0,
+  "rating": 4.5,
   "watched": "2026-10-17",
   "rewatch": false,
   "link": "https://letterboxd.com/pavlesap/film/tenzing/",
