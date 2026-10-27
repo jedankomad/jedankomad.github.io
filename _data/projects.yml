@@ -1,0 +1,14 @@
+# Projekti, prikazuju se na /projects/ ovim redom.
+# name i url su obavezni.
+# icon: link ka ikonici (kvadratna, ~192px); ako je izostaviš, prikazuje se prvo slovo imena.
+# description: kratak opis; ako je izostaviš, prikazuje se adresa bez https://.
+
+- name: Novčanik
+  url: https://jedankomad.github.io/kes-track/
+  icon: https://jedankomad.github.io/kes-track/icon-192.png
+  description: Simple cash expense tracker
+
+- name: Summit Tracker
+  url: https://jedankomad.github.io/summit-tracker/
+  icon: https://jedankomad.github.io/summit-tracker/icon-192.png
+  description: Latest summit of each of the 14 eight-thousanders
