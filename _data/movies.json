@@ -1,5 +1,17 @@
 [
  {
+  "key": "https://letterboxd.com/pavlesap/film/eddie-the-eagle/|2026-10-29",
+  "title": "Eddie the Eagle",
+  "year": 2015,
+  "rating": null,
+  "watched": "2026-10-29",
+  "rewatch": false,
+  "link": "https://letterboxd.com/pavlesap/film/eddie-the-eagle/",
+  "poster": "https://a.ltrbxd.com/resized/film-poster/2/4/7/0/1/4/247014-eddie-the-eagle-0-600-0-900-crop.jpg?v=2b1cb7f98d",
+  "review": "Volim underdog filmove",
+  "detail": true
+ },
+ {
   "key": "https://letterboxd.com/pavlesap/film/the-karate-kid/|2026-10-19",
   "title": "The Karate Kid",
   "year": 1984,
